@@ -1,4 +1,4 @@
-package com.coolapp;
+package com.job;
 
 import android.app.Application;
 
