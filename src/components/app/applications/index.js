@@ -51,7 +51,7 @@ class StatusComponent extends Component {
 
 
     renderFavoriteJobs = (user, jobs) => {
-
+        console.log(user.info);
 
         return (
             user.info ?
@@ -93,8 +93,13 @@ class StatusComponent extends Component {
                                 <View style={{flexDirection: 'row'}}>
                                     <Text style={styles.subtitle}>Term: </Text><Text style={styles.descriptionText}>{Moment(jobs.offers[item[0]].dueDate).format("MMMM Do YYYY")}</Text>
                                 </View>
-                                <View style={{flexDirection: 'row'}}>
-                                    <Text style={styles.subtitle}>Benefits: </Text><Text style={styles.descriptionText}>{jobs.offers[item[0]].benefits}</Text>
+                                <View>
+                                    <Text style={styles.subtitle}>Benefits: </Text>
+                                    <Text style={styles.descriptionText}
+                                          ellipsizeMode={'tail'}
+                                          numberOfLines={3}>
+                                        {jobs.offers[item[0]].benefits}
+                                    </Text>
                                 </View>
                                 <View>
                                     <Text style={styles.subtitle}>Description: </Text>

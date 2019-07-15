@@ -37,7 +37,10 @@ export default function (state={}, action) {
         case GET_USER_INFO:
             return {
                 ...state,
-                info: action.payload || false
+                info: {
+                    favorites: action.payload.favorites || [],
+                    sent: action.payload.sent || [],
+                }
             };
 
         case UPDATE_FAVORITES:
@@ -45,7 +48,7 @@ export default function (state={}, action) {
                 ...state,
                 info: {
                     ...state.info,
-                    favorites: action.payload || false
+                    favorites: action.payload || []
                 }
             };
 
@@ -54,7 +57,7 @@ export default function (state={}, action) {
                 ...state,
                 info: {
                     ...state.info,
-                    sent: action.payload || false
+                    sent: action.payload || []
                 }
             };
 

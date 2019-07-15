@@ -120,14 +120,6 @@ const styles = StyleSheet.create({
         flex:1,
         flexDirection:'row',
     },
-    cardLogo:{
-        height: 50,
-        width: 50,
-        borderRadius: 25,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#00BCD4'
-    },
     cardTopRight:{
         paddingLeft:8,
         paddingRight: 8,
