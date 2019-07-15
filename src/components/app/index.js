@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import {createBottomTabNavigator, createStackNavigator} from "react-navigation";
 
@@ -8,11 +8,6 @@ import Jobs from "./jobs";
 import JobDetails from "./jobs/jobDetails";
 
 import Icon from "react-native-vector-icons/Ionicons";
-
-import {connect} from "react-redux";
-import { bindActionCreators } from "redux";
-import {getJobs} from "../../store/actions/jobsActionCreators";
-import {updateFavorites, applyToJob} from "../../store/actions/userActionCreators";
 
 
 const stackHeaderConfig = (name) => ({
@@ -35,9 +30,6 @@ const hideBottomTabNavigationOnChildElements = (navigation) => {
         tabBarVisible,
     };
 };
-
-
-
 
 
 const JobsStack = createStackNavigator({
@@ -72,9 +64,9 @@ const ApplicationsStack = createStackNavigator({
 
 
 const AppNavigator = createBottomTabNavigator({
-    Jobs: JobsStack,
-    Favorites: FavoritesStack,
-    Applications: ApplicationsStack
+    JobsStack: JobsStack,
+    FavoritesStack: FavoritesStack,
+    ApplicationsStack: ApplicationsStack
 }, {
     tabBarOptions: {
         activeTintColor: '#fff',
@@ -85,20 +77,20 @@ const AppNavigator = createBottomTabNavigator({
             backgroundColor: '#0C3C35'
         }
     },
-    initialRouteName: 'Jobs',
+    initialRouteName: 'JobsStack',
     defaultNavigationOptions: ({navigation}) => ({
         tabBarIcon: ({tintColor}) => {
             const { routeName } = navigation.state;
             let iconName;
 
             switch (routeName) {
-                case 'Jobs':
+                case 'JobsStack':
                     iconName = 'ios-home';
                     break;
-                case 'Favorites':
+                case 'FavoritesStack':
                     iconName = 'ios-heart';
                     break;
-                case 'Applications':
+                case 'ApplicationsStack':
                     iconName = 'ios-paper-plane';
                     break;
             }
@@ -111,65 +103,4 @@ const AppNavigator = createBottomTabNavigator({
 });
 
 
-
-class AppNavigation extends Component {
-
-    state = {jobs: []};
-
-
-    static router = AppNavigator.router;
-
-
-    updateFavorite = (id) => {
-        let jobsCopy = this.state.jobs;
-        let userCopy = this.state.user;
-        jobsCopy.offers[id].favorite = !jobsCopy.offers[id].favorite;
-        userCopy.info.favorites.includes(id) ? userCopy.info.favorites.splice(userCopy.info.favorites.indexOf(id), 1) : userCopy.info.favorites.push(id);
-
-        this.props.updateFavorites(userCopy.auth.uid, userCopy.info.favorites).then(() => {
-            this.setState({jobs: jobsCopy, user: userCopy});
-        })
-    };
-
-
-    applyToAJob = (id) => {
-        let userCopy = this.state.user;
-        userCopy.info.sent.push([id, 'in review']);
-
-        this.props.applyToJob(userCopy.auth.uid, userCopy.info.sent).then(() => {
-            this.setState({user: userCopy});
-            alert('Application successful');
-        })
-    };
-
-
-    componentDidMount() {
-        const user = this.props.navigation.getParam("user");
-        this.props.getJobs(user.info.favorites).then(() => {
-            this.setState({jobs: this.props.Jobs, user: this.props.User});
-            // console.log(this.props);
-        })
-
-    }
-
-
-    render() {
-        return(<AppNavigator navigation={this.props.navigation}
-                             screenProps={{
-                                 jobs: this.state.jobs,
-                                 user: this.state.user,
-                                 updateFavorite: this.updateFavorite,
-                                 applyToJob: this.applyToAJob
-                             }}
-            />
-            )
-    }
-}
-
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({getJobs, updateFavorites, applyToJob}, dispatch);
-
-
-export default connect((state) => {
-    return {Jobs: state.Jobs, User: state.User}
-}, mapDispatchToProps)(AppNavigation);
+export default AppNavigator;

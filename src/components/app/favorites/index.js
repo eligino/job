@@ -4,6 +4,10 @@ import SvgUri from "react-native-svg-uri";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Moment from "moment";
 import Logo from "../../../utils/misc/logo";
+import {getJobs} from "../../../store/actions/jobsActionCreators";
+import {updateFavorites} from "../../../store/actions/userActionCreators";
+import {connect} from "react-redux";
+import { bindActionCreators } from "redux";
 
 class FavoritesComponent extends Component {
 
@@ -17,8 +21,11 @@ class FavoritesComponent extends Component {
         </View>
     };
 
-    renderFavorite = (item) => {
-        return item.favorite ? (<Ionicons name={'ios-heart'} size={24} color={'#D73B4A'}/>) : (<Ionicons name={'ios-heart-empty'} size={25} color={'#000'}/>)
+
+    renderFavorite = (jobId) => {
+        return this.props.User.info.favorites.includes(jobId) ?
+            (<Ionicons name={'ios-heart'} size={24} color={'#D73B4A'}/>) :
+            (<Ionicons name={'ios-heart-empty'} size={25} color={'#000'}/>)
     };
 
 
@@ -27,33 +34,33 @@ class FavoritesComponent extends Component {
 
         return (
             user.info ?
-                user.info.favorites.map((item, id) => (
-                    <TouchableOpacity key={id} onPress={()=> this.props.navigation.navigate('FavoriteDetails', {jobId: item})}>
+                user.info.favorites.map((jobId, id) => (
+                    <TouchableOpacity key={id} onPress={()=> this.props.navigation.navigate('FavoriteDetails', {jobId: jobId})}>
                         <View style={styles.cardContainer}>
                             <View style={styles.cardTop}>
 
                                 <View>
-                                    <SvgUri source={{uri: jobs.offers[item].enterpriseData.logo }} width="50" height="50"/>
+                                    <SvgUri source={{uri: jobs.offers[jobId].enterpriseData.logo }} width="50" height="50"/>
                                 </View>
 
                                 <View style={styles.cardTopRight}>
 
                                     <View style={{flexDirection:'row'}}>
                                         <View style={{flex: 1}}>
-                                            <Text style={styles.positionText}>{jobs.offers[item].position}</Text>
-                                            <Text>{ jobs.offers[item].enterpriseData.name }</Text>
+                                            <Text style={styles.positionText}>{jobs.offers[jobId].position}</Text>
+                                            <Text>{ jobs.offers[jobId].enterpriseData.name }</Text>
                                         </View>
 
-                                        <TouchableOpacity onPress={() => this.props.screenProps.updateFavorite(item)}>
-                                            {this.renderFavorite(jobs.offers[item])}
+                                        <TouchableOpacity onPress={() => this.props.updateFavorites(user, jobId)}>
+                                            {this.renderFavorite(jobId)}
                                         </TouchableOpacity>
                                     </View>
 
 
 
                                     <View style={{flexDirection:'row'}}>
-                                        <Text style={styles.locationText}>{jobs.offers[item].location}</Text>
-                                        <Text style={styles.dateText}>{Moment(jobs.offers[item].postDate).fromNow()}</Text>
+                                        <Text style={styles.locationText}>{jobs.offers[jobId].location}</Text>
+                                        <Text style={styles.dateText}>{Moment(jobs.offers[jobId].postDate).fromNow()}</Text>
                                     </View>
                                 </View>
                             </View>
@@ -61,7 +68,7 @@ class FavoritesComponent extends Component {
                                 <Text ellipsizeMode={'tail'}
                                       numberOfLines={5}
                                       style={styles.descriptionText}>
-                                    {jobs.offers[item].description}
+                                    {jobs.offers[jobId].description}
                                 </Text>
                             </View>
                         </View>
@@ -72,11 +79,10 @@ class FavoritesComponent extends Component {
     };
 
     render() {
-        const {user, jobs} = this.props.screenProps;
+        const {User, Jobs} = this.props;
         return (
             <ScrollView style={{backgroundColor: "#f0f0f0", paddingTop: 10,}}>
-                {/*{ console.log(user) }*/}
-                { this.renderFavoriteJobs(user, jobs) }
+                { this.renderFavoriteJobs(User, Jobs) }
                 <View style={{marginBottom: 10}}/>
             </ScrollView>
         );
@@ -96,7 +102,6 @@ const styles = StyleSheet.create({
         shadowRadius: 20,
         elevation: 1,
         borderRadius: 20,
-        // flex:1,
     },
     cardTop:{
         padding: 10,
@@ -107,7 +112,6 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 25,
-        //flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#00BCD4'
@@ -118,11 +122,9 @@ const styles = StyleSheet.create({
         flex: 1
     },
     positionText:{
-        // fontFamily:'Roboto-Bold',
         color:'#0C3C35',
         fontSize:16,
         fontFamily:'Roboto-Bold',
-        // flex: 1
     },
     locationText:{
         color: '#0C3C35',
@@ -137,8 +139,6 @@ const styles = StyleSheet.create({
     },
 
     descriptionText:{
-        // borderWidth:1,
-        // borderColor:'#dddddd',
         color: "#000",
         fontSize: 14,
         fontFamily:'Roboto-Regular',
@@ -147,14 +147,15 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingBottom: 20
     },
-    bottomCard:{
-        flex:1,
-        flexDirection:'row',
-        borderTopWidth:1,
-        borderTopColor:'#e6e6e6',
-        padding:10
-    },
 });
 
 
-export default FavoritesComponent;
+const mapStateToProps = (state) => {
+    return {Jobs: state.Jobs, User: state.User}
+};
+
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({getJobs, updateFavorites}, dispatch);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(FavoritesComponent);

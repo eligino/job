@@ -1,21 +1,30 @@
 import React, {Component} from 'react';
-import {View, ScrollView, ActivityIndicator} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import {View, ActivityIndicator, Platform} from 'react-native';
 
-import Logo from '../../utils/misc/logo';
 import {getTokens, setTokens} from "../../utils/misc/misc";
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from "redux";
-import {autoSignIn, signIn, signUp, getUserInfo} from '../../store/actions/userActionCreators';
+import {connect} from 'react-redux';
+import {bindActionCreators} from "redux";
+import {autoSignIn, getUserInfo, signIn, signUp} from '../../store/actions/userActionCreators';
 
 import Login from "./login";
 import Register from "./register";
+import {createStackNavigator} from "react-navigation";
 
 
+const AuthNavigator = createStackNavigator({
+    Login: Login,
+    Register: Register
+}, {
+    headerMode: "none",
+    mode: Platform.OS === "ios" ? "modal" : "card",
+    initialRouteName: 'Login'
+});
 
 
-class AuthComponent extends Component {
+class AuthNavigation extends Component {
+
+    static router = AuthNavigator.router;
 
     state = {
         loading: true,
@@ -29,15 +38,11 @@ class AuthComponent extends Component {
                 this.setState({loading: false})
             } else {
                 this.props.autoSignIn(value[1][1]).then(() => {
-                    if(!this.props.User.auth.token){
-                        this.setState({loading:false})
-                    }else{
-                        setTokens(this.props.User.auth,()=>{
-                            const user = this.props.User;
-                            this.props.getUserInfo(user.auth.uid).then(() => {
-                                const userWithInfo = this.props.User;
-                                this.props.navigation.navigate('App', {user: userWithInfo});
-                            })
+                    if (!this.props.User.auth.token) {
+                        this.setState({loading: false})
+                    } else {
+                        setTokens(this.props.User.auth, () => {
+                            this.props.navigation.navigate('App');
                         })
                     }
                 })
@@ -46,15 +51,10 @@ class AuthComponent extends Component {
     }
 
 
-    goToRegister = () => this.setState({screen: 'register'});
-    goToLogin = () => this.setState({screen: 'login'});
-    goToHome = (param = {}) => this.props.navigation.navigate('App', param);
-
-
 
     render() {
 
-        if (this.state.loading){
+        if (this.state.loading) {
             return (
                 <View style={{
                     flex: 1,
@@ -67,42 +67,25 @@ class AuthComponent extends Component {
             )
         } else {
             return (
-                <ScrollView contentContainerStyle={{
-                    flexGrow: 1,
-                    justifyContent: 'space-between'
-                }}>
-                    <LinearGradient style={{ flex: 1, padding: 50}}
-                                    colors={['#0C3C35', '#5C7C78']}>
-
-                        <View style={{alignItems: 'center', paddingBottom: 50}}>
-                            <Logo style={{
-                                width: 112,
-                                height: 112,
-                            }}/>
-                        </View>
-
-                        <AuthScreen screen={this.state.screen}
-                                    goToRegister={this.goToRegister}
-                                    goToLogin={this.goToLogin}
-                                    goToHome={this.goToHome}
-                                    signIn={this.props.signIn}
-                                    signUp={this.props.signUp}
-                                    getUserInfo={this.props.getUserInfo}
-                                    User={this.props.User}
-                        />
-
-                    </LinearGradient>
-                </ScrollView>
-            );
+                <AuthNavigator navigation={this.props.navigation}
+                                   screenProps={{
+                                       user: this.props.User,
+                                       signIn: this.props.signIn,
+                                       signUp: this.props.signUp,
+                                       getUserInfo: this.props.getUserInfo
+                                   }}
+                />);
         }
     }
 }
 
 
-const AuthScreen = (props) => props.screen === "login" ? (<Login {...props}/>) : (<Register {...props}/>);
+const mapStateToProps = (state) => {
+    return {User: state.User}
+};
 
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({autoSignIn, signIn, signUp, getUserInfo}, dispatch);
 
 
-export default connect((state) => ({User: state.User}), mapDispatchToProps)(AuthComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(AuthNavigation);

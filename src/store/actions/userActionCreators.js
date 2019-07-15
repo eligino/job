@@ -94,11 +94,14 @@ export const getUserInfo = (uid) => {
 };
 
 
-export const updateFavorites = (uid, favorites) => {
+export const updateFavorites = (user, id) => {
+
+    user.info.favorites.includes(id) ? user.info.favorites.splice(user.info.favorites.indexOf(id), 1) : user.info.favorites.push(id);
+
     const request = axios({
         method:'PUT',
-        url:`${FIREBASE_URL}/users/${uid}/favorites.json`,
-        data: favorites
+        url:`${FIREBASE_URL}/users/${user.auth.uid}/favorites.json`,
+        data: user.info.favorites
     }).then(response=>{
         return response.data;
     }).catch( e => {
@@ -112,11 +115,13 @@ export const updateFavorites = (uid, favorites) => {
 };
 
 
-export const applyToJob = (uid, sent) => {
+export const applyToJob = (user, id) => {
+    user.info.sent.push([id, 'in review']);
+
     const request = axios({
         method:'PUT',
-        url:`${FIREBASE_URL}/users/${uid}/sent.json`,
-        data: sent
+        url:`${FIREBASE_URL}/users/${user.auth.uid}/sent.json`,
+        data: user.info.sent
     }).then(response=>{
         return response.data;
     }).catch( e => {

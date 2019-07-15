@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {View} from 'react-native';
+import React, {Component} from 'react';
+import {ScrollView, View} from 'react-native';
 
 import Input from '../../utils/forms/input';
 import Button from '../../utils/forms/button';
@@ -8,9 +8,13 @@ import ValidationRules from '../../utils/forms/validationRules';
 
 
 import {setTokens} from "../../utils/misc/misc";
+import LinearGradient from "react-native-linear-gradient";
+import Logo from "../../utils/misc/logo";
 
 
-class Login extends Component{
+
+
+class Login extends Component {
 
     state = {
         hasErrors: false,
@@ -19,7 +23,7 @@ class Login extends Component{
                 value: '',
                 valid: false,
                 type: 'textInput',
-                rules:{
+                rules: {
                     isRequired: true,
                     isEmail: true
                 }
@@ -28,16 +32,13 @@ class Login extends Component{
                 value: '',
                 valid: false,
                 type: 'textInput',
-                rules:{
+                rules: {
                     isRequired: true,
                     minLength: 8
                 }
             }
         }
     };
-
-
-
 
 
     updateInput = (name, value) => {
@@ -67,13 +68,13 @@ class Login extends Component{
         let formToSubmit = {};
         const formCopy = this.state.form;
 
-        for (let key in formCopy){
+        for (let key in formCopy) {
             isFormValid = isFormValid && formCopy[key].valid;
             formToSubmit[key] = formCopy[key].value;
         }
 
         if (isFormValid) {
-            this.props.signIn(formToSubmit).then(() => {
+            this.props.screenProps.signIn(formToSubmit).then(() => {
                 this.manageAccess()
             })
         } else {
@@ -83,53 +84,65 @@ class Login extends Component{
 
 
     manageAccess = () => {
-        if (!this.props.User.auth.uid){
+
+        if (!this.props.screenProps.user.auth.uid) {
             this.setState({hasErrors: true})
-        }else {
-            setTokens(this.props.User.auth, () => {
+        } else {
+            setTokens(this.props.screenProps.user.auth, () => {
                 this.setState({hasErrors: false});
-                const user = this.props.User;
-                this.props.getUserInfo(user.auth.uid).then(() => {
-                    const userWithInfo = this.props.User;
-                    this.props.goToHome({user: userWithInfo});
-                    // this.props.navigation.navigate('App', {user: userWithInfo});
+                const user = this.props.screenProps.user;
+                this.props.screenProps.getUserInfo(user.auth.uid).then(() => {
+                    const userWithInfo = this.props.screenProps.user;
+                    this.props.navigation.navigate('App',{user: userWithInfo});
                 })
             })
         }
     };
 
 
-
-    render(){
+    render() {
         return (
-                <View>
-                    <Input type={this.state.form.email.type}
-                           placeholder={'Enter your email'}
-                           value={this.state.form.email.value}
-                           keyboardType={"email-address"}
-                           onChangeText={value => this.updateInput("email", value)}/>
+            <ScrollView contentContainerStyle={{
+                flexGrow: 1,
+                justifyContent: 'space-between'
+            }}>
+                <LinearGradient style={{flex: 1, padding: 50}} colors={['#0C3C35', '#5C7C78']}>
 
-                    <Input type={this.state.form.password.type}
-                           placeholder={'Enter your password'}
-                           value={this.state.form.password.value}
-                           onChangeText={value => this.updateInput("password", value)}
-                           secureTextEntry={true}/>
+                    <View style={{alignItems: 'center', paddingBottom: 50}}>
+                        <Logo style={{width: 112, height: 112,}}/>
+                    </View>
+
+                    <View>
+                        <Input type={this.state.form.email.type}
+                               placeholder={'Enter your email'}
+                               value={this.state.form.email.value}
+                               keyboardType={"email-address"}
+                               onChangeText={value => this.updateInput("email", value)}/>
+
+                        <Input type={this.state.form.password.type}
+                               placeholder={'Enter your password'}
+                               value={this.state.form.password.value}
+                               onChangeText={value => this.updateInput("password", value)}
+                               secureTextEntry={true}/>
 
 
-                    <ErrorPopup hasErrors={this.state.hasErrors}/>
+                        <ErrorPopup hasErrors={this.state.hasErrors}/>
 
-                    <Button type={'primary'}
-                            onPress={this.submitUser}
-                            text={'Login'}/>
+                        <Button type={'primary'}
+                                onPress={this.submitUser}
+                                text={'Login'}/>
 
-                    <Button type={'secondary'}
-                            onPress={() => this.props.goToRegister()}
-                            text={'I want to register'}/>
+                        <Button type={'secondary'}
+                                onPress={() => this.props.navigation.navigate('Register')}
+                                text={'I want to register'}/>
 
-                    <Button type={'secondary'}
-                            onPress={() => this.props.goToHome()}
-                            text={"I'll do it later"}/>
-                </View>
+                        {/*<Button type={'secondary'}*/}
+                        {/*        onPress={() => this.props.navigation.navigate('App')}*/}
+                        {/*        text={"I'll do it later"}/>*/}
+                    </View>
+
+                </LinearGradient>
+            </ScrollView>
         )
     }
 }

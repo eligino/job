@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, ScrollView, TouchableOpacity} from 'react-native';
 import SvgUri from 'react-native-svg-uri';
 
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Moment from 'moment';
 import Logo from "../../../utils/misc/logo";
+import {getJobs} from "../../../store/actions/jobsActionCreators";
+import {getUserInfo, updateFavorites} from "../../../store/actions/userActionCreators";
+import {connect} from "react-redux";
+import { bindActionCreators } from "redux";
+
 
 
 
@@ -19,16 +24,22 @@ class JobsComponent extends Component {
         </View>
     };
 
+    componentDidMount() {
+        const user = this.props.User;
+        this.props.getUserInfo(user.auth.uid).then(() => {
+            this.props.getJobs();
+        })
+    }
 
 
-
-    renderFavorite = (item) => {
-        return item.favorite ? (<Ionicons name={'ios-heart'} size={24} color={'#D73B4A'}/>) : (<Ionicons name={'ios-heart-empty'} size={25} color={'#000'}/>)
+    renderFavorite = (jobId) => {
+        return this.props.User.info.favorites.includes(jobId) ?
+            (<Ionicons name={'ios-heart'} size={24} color={'#D73B4A'}/>) :
+            (<Ionicons name={'ios-heart-empty'} size={25} color={'#000'}/>)
     };
 
 
     renderJobs = (jobs) => {
-
         if (jobs.offers) {
             const jobsIds = Object.keys(jobs.offers);
             return (
@@ -49,8 +60,8 @@ class JobsComponent extends Component {
                                             <Text>{ jobs.offers[jobId].enterpriseData.name }</Text>
                                         </View>
 
-                                        <TouchableOpacity onPress={() => this.props.screenProps.updateFavorite(jobId)}>
-                                            {this.renderFavorite(jobs.offers[jobId])}
+                                        <TouchableOpacity onPress={() => this.props.updateFavorites(this.props.User, jobId)}>
+                                            {this.renderFavorite(jobId)}
                                         </TouchableOpacity>
                                     </View>
 
@@ -83,7 +94,7 @@ class JobsComponent extends Component {
 
         return (
             <ScrollView style={{backgroundColor: "#f0f0f0", paddingTop: 10,}}>
-                { this.renderJobs(this.props.screenProps.jobs) }
+                { this.renderJobs(this.props.Jobs) }
                 <View style={{marginBottom: 10}}/>
             </ScrollView>
         );
@@ -94,7 +105,6 @@ class JobsComponent extends Component {
 const styles = StyleSheet.create({
     cardContainer: {
         backgroundColor:'#fff',
-
         marginBottom:10,
         marginLeft: 10,
         marginRight: 10,
@@ -104,7 +114,6 @@ const styles = StyleSheet.create({
         shadowRadius: 20,
         elevation: 1,
         borderRadius: 20,
-        // flex:1,
     },
     cardTop:{
         padding: 10,
@@ -115,7 +124,6 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 25,
-        //flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#00BCD4'
@@ -126,11 +134,9 @@ const styles = StyleSheet.create({
         flex: 1
     },
     positionText:{
-        // fontFamily:'Roboto-Bold',
         color:'#0C3C35',
         fontSize:16,
         fontFamily:'Roboto-Bold',
-        // flex: 1
     },
     locationText:{
         color: '#0C3C35',
@@ -153,15 +159,15 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingBottom: 20
     },
-    bottomCard:{
-        flex:1,
-        flexDirection:'row',
-        borderTopWidth:1,
-        borderTopColor:'#e6e6e6',
-        padding:10
-    },
 });
 
 
+const mapStateToProps = (state) => {
+    return {Jobs: state.Jobs, User: state.User}
+};
 
-export default JobsComponent;
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({getJobs, updateFavorites, getUserInfo}, dispatch);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(JobsComponent);

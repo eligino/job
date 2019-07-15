@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, ScrollView, TouchableOpacity} from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Moment from 'moment';
 import SvgUri from "react-native-svg-uri";
+import {applyToJob, updateFavorites} from "../../../store/actions/userActionCreators";
+import {connect} from "react-redux";
+import { bindActionCreators } from "redux";
 
 class JobComponent extends Component {
 
@@ -11,11 +14,10 @@ class JobComponent extends Component {
     };
 
     jobId = this.props.navigation.getParam("jobId");
-    job = this.props.screenProps.jobs.offers[this.jobId];
-    user = this.props.screenProps.user;
+    job = this.props.Jobs.offers[this.jobId];
+    user = this.props.User;
 
     renderExperience = () => {
-        console.log(this.user);
         return this.job.experiences !== "" ?
             (
                 <View style={styles.section}>
@@ -37,13 +39,15 @@ class JobComponent extends Component {
 
     };
 
-    renderFavorite = (item) => {
-        return item.favorite ? (<Ionicons name={'ios-heart'} size={24} color={'#D73B4A'}/>) : (<Ionicons name={'ios-heart-empty'} size={25} color={'#000'}/>)
+    renderFavorite = (jobId) => {
+        return this.user.info.favorites.includes(jobId) ?
+            (<Ionicons name={'ios-heart'} size={24} color={'#D73B4A'}/>) :
+            (<Ionicons name={'ios-heart-empty'} size={25} color={'#000'}/>)
     };
 
 
-    renderFavoriteButtonText = (item) => {
-        return !item.favorite ?
+    renderFavoriteButtonText = (jobId) => {
+        return !this.user.info.favorites.includes(jobId) ?
             (
                 <>
                     <Ionicons name={'ios-heart-empty'} size={24} color={'#000'}/>
@@ -61,11 +65,11 @@ class JobComponent extends Component {
     renderBottomButtons = () => {
         return this.user.info.sent.find((item) => item[0] === this.jobId) === undefined ? (
             <View style={{flexDirection: 'row'}}>
-                <TouchableOpacity style={styles.button} onPress={() => this.props.screenProps.updateFavorite(this.jobId)}>
-                    {this.renderFavoriteButtonText(this.job)}
+                <TouchableOpacity style={styles.button} onPress={() => this.props.updateFavorites(this.user, this.jobId)}>
+                    {this.renderFavoriteButtonText(this.jobId)}
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.button, {backgroundColor: '#0C3C35'}]}
-                                  onPress={() => this.props.screenProps.applyToJob(this.jobId)}
+                                  onPress={() => this.props.applyToJob(this.user, this.jobId)}
                 >
                     <Text style={[styles.buttonText, {color: '#fff'}]}>Apply!</Text>
                 </TouchableOpacity>
@@ -91,8 +95,8 @@ class JobComponent extends Component {
                                         <Text>{this.job.enterpriseData.name }</Text>
                                     </View>
 
-                                    <TouchableOpacity onPress={() => this.props.screenProps.updateFavorite(this.jobId)}>
-                                        {this.renderFavorite(this.job)}
+                                    <TouchableOpacity onPress={() => this.props.updateFavorites(this.user, this.jobId)}>
+                                        {this.renderFavorite(this.jobId)}
                                     </TouchableOpacity>
                                 </View>
                                 <View style={{flexDirection:'row'}}>
@@ -156,8 +160,6 @@ const styles = StyleSheet.create({
         flex:1,
     },
     presentationSection:{
-        // padding: 10,
-        // flex:1,
         flexDirection:'row',
         paddingBottom: 8
     },
@@ -172,7 +174,6 @@ const styles = StyleSheet.create({
         flex: 1
     },
     section:{
-        // flex:1,
         borderTopWidth: 1,
         borderTopColor: '#000',
         paddingTop: 8,
@@ -184,11 +185,9 @@ const styles = StyleSheet.create({
         fontSize: 14
     },
     positionText:{
-        // fontFamily:'Roboto-Bold',
         color:'#0C3C35',
         fontSize:16,
         fontFamily:'Roboto-Bold',
-        // flex: 1
     },
     locationText:{
         color: '#0C3C35',
@@ -225,4 +224,12 @@ const styles = StyleSheet.create({
 });
 
 
-export default JobComponent;
+const mapStateToProps = (state) => {
+    return {Jobs: state.Jobs, User: state.User}
+};
+
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({updateFavorites, applyToJob}, dispatch);
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(JobComponent);

@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
-import {View} from 'react-native';
+import React, {Component} from 'react';
+import {ScrollView, View} from 'react-native';
 
 import Input from '../../utils/forms/input';
 import Button from "../../utils/forms/button";
 import ErrorPopup from '../../utils/forms/errorPopup';
 import ValidationRules from '../../utils/forms/validationRules';
+import LinearGradient from "react-native-linear-gradient";
+import Logo from "../../utils/misc/logo";
+
 
 
 import {setTokens} from "../../utils/misc/misc";
 
 
 
-class Register extends Component{
+class Register extends Component {
 
 
     state = {
@@ -21,7 +24,7 @@ class Register extends Component{
                 value: '',
                 valid: false,
                 type: 'textInput',
-                rules:{
+                rules: {
                     isRequired: true,
                     isEmail: true
                 }
@@ -30,7 +33,7 @@ class Register extends Component{
                 value: '',
                 valid: false,
                 type: 'textInput',
-                rules:{
+                rules: {
                     isRequired: true,
                     minLength: 8
                 }
@@ -39,15 +42,12 @@ class Register extends Component{
                 value: '',
                 valid: false,
                 type: 'textInput',
-                rules:{
+                rules: {
                     confirmEntry: 'password'
                 }
             }
         }
     };
-
-
-
 
 
     updateInput = (name, value) => {
@@ -72,36 +72,19 @@ class Register extends Component{
     };
 
 
-    manageAccess = () => {
-        if (!this.props.User.auth.uid){
-            this.setState({hasErrors: true})
-        }else {
-            setTokens(this.props.User.auth, () => {
-                this.setState({hasErrors: false});
-                const user = this.props.User;
-                this.props.getUserInfo(user.auth.uid).then(() => {
-                    const userWithInfo = this.props.User;
-                    this.props.goToHome({user: userWithInfo});
-                    // this.props.navigation.navigate('App', {user: userWithInfo});
-                })
-            })
-        }
-    };
-
-
     submitUser = () => {
         let isFormValid = true;
         let formToSubmit = {};
         const formCopy = this.state.form;
 
-        for (let key in formCopy){
+        for (let key in formCopy) {
             isFormValid = isFormValid && formCopy[key].valid;
             formToSubmit[key] = formCopy[key].value;
         }
 
 
         if (isFormValid) {
-            this.props.signUp(formToSubmit).then(() => {
+            this.props.screenProps.signUp(formToSubmit).then(() => {
                 this.manageAccess()
             });
         } else {
@@ -110,48 +93,75 @@ class Register extends Component{
     };
 
 
+    manageAccess = () => {
+        if (!this.props.screenProps.user.auth.uid) {
+            this.setState({hasErrors: true})
+        } else {
+            setTokens(this.props.screenProps.user.auth, () => {
+                this.setState({hasErrors: false});
+                const user = this.props.screenProps.user;
+                this.props.screenProps.getUserInfo(user.auth.uid).then(() => {
+                    const userWithInfo = this.props.screenProps.user;
+                    this.props.navigation.navigate('App',{user: userWithInfo});
+                })
+            })
+        }
+    };
 
-    render(){
+
+
+
+
+    render() {
         return (
-                <View>
-                    <Input type={this.state.form.email.type}
-                           placeholder={'Enter your email'}
-                           value={this.state.form.email.value}
-                           keyboardType={"email-address"}
-                           onChangeText={value => this.updateInput("email", value)}
-                    />
+            <ScrollView contentContainerStyle={{flexGrow: 1, justifyContent: 'space-between'}}>
+                <LinearGradient style={{flex: 1, padding: 50}} colors={['#5C7C78', '#0C3C35']}>
 
-                    <Input type={this.state.form.password.type}
-                           placeholder={'Enter your password'}
-                           value={this.state.form.password.value}
-                           onChangeText={value => this.updateInput("password", value)}
-                           secureTextEntry={true}
-                    />
+                    <View style={{alignItems: 'center', paddingBottom: 50}}>
+                        <Logo style={{width: 112, height: 112,}}/>
+                    </View>
 
-                    <Input type={this.state.form.confirmPassword.type}
-                           placeholder={'Confirm your password'}
-                           value={this.state.form.confirmPassword.value}
-                           onChangeText={value => this.updateInput("confirmPassword", value)}
-                           secureTextEntry={true}
-                    />
+                    <View>
+                        <Input type={this.state.form.email.type}
+                               placeholder={'Enter your email'}
+                               value={this.state.form.email.value}
+                               keyboardType={"email-address"}
+                               onChangeText={value => this.updateInput("email", value)}
+                        />
 
+                        <Input type={this.state.form.password.type}
+                               placeholder={'Enter your password'}
+                               value={this.state.form.password.value}
+                               onChangeText={value => this.updateInput("password", value)}
+                               secureTextEntry={true}
+                        />
 
-                    <ErrorPopup hasErrors={this.state.hasErrors}/>
-
-
-                    <Button type={'primary'}
-                            onPress={this.submitUser}
-                            text={'Register'}/>
-
-                    <Button type={'secondary'}
-                            onPress={() => this.props.goToLogin()}
-                            text={'I want to login'}/>
+                        <Input type={this.state.form.confirmPassword.type}
+                               placeholder={'Confirm your password'}
+                               value={this.state.form.confirmPassword.value}
+                               onChangeText={value => this.updateInput("confirmPassword", value)}
+                               secureTextEntry={true}
+                        />
 
 
-                    <Button type={'secondary'}
-                            onPress={() => this.props.goToHome()}
-                            text={"I'll do it later"}/>
-                </View>
+                        <ErrorPopup hasErrors={this.state.hasErrors}/>
+
+
+                        <Button type={'primary'}
+                                onPress={this.submitUser}
+                                text={'Register'}/>
+
+                        <Button type={'secondary'}
+                                onPress={() => this.props.navigation.navigate('Login')}
+                                text={'I want to login'}/>
+
+
+                        {/*<Button type={'secondary'}*/}
+                        {/*        onPress={() => this.props.navigation.navigate('App')}*/}
+                        {/*        text={"I'll do it later"}/>*/}
+                    </View>
+                </LinearGradient>
+            </ScrollView>
         )
     }
 }

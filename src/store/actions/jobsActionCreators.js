@@ -3,7 +3,7 @@ import axios from 'axios';
 import {FIREBASE_URL} from "../../utils/misc/misc";
 
 
-export function getJobs(favorites) {
+export function getJobs() {
 
     const promise = new Promise((resolve,reject)=>{
 
@@ -23,8 +23,7 @@ export function getJobs(favorites) {
                 for(let id in jobs){
                     responseData[id] = {
                         ...jobs[id],
-                        enterpriseData: enterprises[jobs[id].enterprise],
-                        favorite: favorites.includes(id)
+                        enterpriseData: enterprises[jobs[id].enterprise]
                     }
                 }
 

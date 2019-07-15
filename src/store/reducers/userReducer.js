@@ -44,6 +44,7 @@ export default function (state={}, action) {
             return {
                 ...state,
                 info: {
+                    ...state.info,
                     favorites: action.payload || false
                 }
             };
@@ -52,6 +53,7 @@ export default function (state={}, action) {
             return {
                 ...state,
                 info: {
+                    ...state.info,
                     sent: action.payload || false
                 }
             };
