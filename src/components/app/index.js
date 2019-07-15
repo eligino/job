@@ -19,7 +19,6 @@ const stackHeaderConfig = (name) => ({
 });
 
 
-
 const hideBottomTabNavigationOnChildElements = (navigation) => {
     let tabBarVisible = true;
     if (navigation.state.index > 0) {
@@ -38,7 +37,7 @@ const JobsStack = createStackNavigator({
 }, {
     headerLayoutPreset: "center",
     defaultNavigationOptions: stackHeaderConfig("Home"),
-    navigationOptions: ({ navigation }) => hideBottomTabNavigationOnChildElements(navigation)
+    navigationOptions: ({navigation}) => hideBottomTabNavigationOnChildElements(navigation)
 });
 
 
@@ -48,7 +47,7 @@ const FavoritesStack = createStackNavigator({
 }, {
     headerLayoutPreset: "center",
     defaultNavigationOptions: stackHeaderConfig("Favorites"),
-    navigationOptions: ({ navigation }) => hideBottomTabNavigationOnChildElements(navigation)
+    navigationOptions: ({navigation}) => hideBottomTabNavigationOnChildElements(navigation)
 });
 
 
@@ -58,9 +57,8 @@ const ApplicationsStack = createStackNavigator({
 }, {
     headerLayoutPreset: "center",
     defaultNavigationOptions: stackHeaderConfig("Applications"),
-    navigationOptions: ({ navigation }) => hideBottomTabNavigationOnChildElements(navigation)
+    navigationOptions: ({navigation}) => hideBottomTabNavigationOnChildElements(navigation)
 });
-
 
 
 const AppNavigator = createBottomTabNavigator({
@@ -80,7 +78,7 @@ const AppNavigator = createBottomTabNavigator({
     initialRouteName: 'JobsStack',
     defaultNavigationOptions: ({navigation}) => ({
         tabBarIcon: ({tintColor}) => {
-            const { routeName } = navigation.state;
+            const {routeName} = navigation.state;
             let iconName;
 
             switch (routeName) {

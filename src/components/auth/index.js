@@ -51,7 +51,6 @@ class AuthNavigation extends Component {
     }
 
 
-
     render() {
 
         if (this.state.loading) {
@@ -68,12 +67,12 @@ class AuthNavigation extends Component {
         } else {
             return (
                 <AuthNavigator navigation={this.props.navigation}
-                                   screenProps={{
-                                       user: this.props.User,
-                                       signIn: this.props.signIn,
-                                       signUp: this.props.signUp,
-                                       getUserInfo: this.props.getUserInfo
-                                   }}
+                               screenProps={{
+                                   user: this.props.User,
+                                   signIn: this.props.signIn,
+                                   signUp: this.props.signUp,
+                                   getUserInfo: this.props.getUserInfo
+                               }}
                 />);
         }
     }

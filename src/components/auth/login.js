@@ -12,8 +12,6 @@ import LinearGradient from "react-native-linear-gradient";
 import Logo from "../../utils/misc/logo";
 
 
-
-
 class Login extends Component {
 
     state = {
@@ -52,11 +50,8 @@ class Login extends Component {
 
         // rules
         let rules = formCopy[name].rules;
-        let valid = ValidationRules(value, rules, formCopy);
 
-
-        formCopy[name].valid = valid;
-
+        formCopy[name].valid = ValidationRules(value, rules, formCopy);
         this.setState({
             form: formCopy
         })
@@ -93,7 +88,7 @@ class Login extends Component {
                 const user = this.props.screenProps.user;
                 this.props.screenProps.getUserInfo(user.auth.uid).then(() => {
                     const userWithInfo = this.props.screenProps.user;
-                    this.props.navigation.navigate('App',{user: userWithInfo});
+                    this.props.navigation.navigate('App', {user: userWithInfo});
                 })
             })
         }
@@ -146,7 +141,6 @@ class Login extends Component {
         )
     }
 }
-
 
 
 export default Login;

@@ -3,13 +3,13 @@ import {View, StyleSheet, Text} from 'react-native';
 
 
 const errorPopup = (props) => {
-    if (!props.hasErrors){
+    if (!props.hasErrors) {
         return null;
     }
 
     return (
         <View style={styles.errorContainer}>
-            <View  style={styles.errorInnerContainer}>
+            <View style={styles.errorInnerContainer}>
                 <Text style={styles.errorLabel}>Oops, please check your email and your password.</Text>
             </View>
         </View>

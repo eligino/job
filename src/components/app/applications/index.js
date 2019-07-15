@@ -6,7 +6,7 @@ import Moment from "moment";
 import {getJobs} from "../../../store/actions/jobsActionCreators";
 import {applyToJob, updateFavorites} from "../../../store/actions/userActionCreators";
 import {connect} from "react-redux";
-import { bindActionCreators } from "redux";
+import {bindActionCreators} from "redux";
 
 class StatusComponent extends Component {
 
@@ -56,42 +56,47 @@ class StatusComponent extends Component {
         return (
             user.info ?
                 user.info.sent.map((item, id) => (
-                    <TouchableOpacity key={id} onPress={()=> this.props.navigation.navigate('AppliedJobDetails', {jobId: item[0]})}>
+                    <TouchableOpacity key={id}
+                                      onPress={() => this.props.navigation.navigate('AppliedJobDetails', {jobId: item[0]})}>
                         <View style={styles.cardContainer}>
                             <View style={styles.cardTop}>
 
                                 <View>
-                                    <SvgUri source={{uri: jobs.offers[item[0]].enterpriseData.logo }} width="50" height="50"/>
+                                    <SvgUri source={{uri: jobs.offers[item[0]].enterpriseData.logo}} width="50"
+                                            height="50"/>
                                 </View>
 
                                 <View style={styles.cardTopRight}>
 
-                                    <View style={{flexDirection:'row'}}>
+                                    <View style={{flexDirection: 'row'}}>
                                         <View style={{flex: 1}}>
                                             <Text style={styles.positionText}>{jobs.offers[item[0]].position}</Text>
-                                            <Text>{ jobs.offers[item[0]].enterpriseData.name }</Text>
+                                            <Text>{jobs.offers[item[0]].enterpriseData.name}</Text>
                                         </View>
 
                                         {this.renderStatus(item[1])}
                                     </View>
 
 
-
-                                    <View style={{flexDirection:'row'}}>
+                                    <View style={{flexDirection: 'row'}}>
                                         <Text style={styles.locationText}>{jobs.offers[item[0]].location}</Text>
-                                        <Text style={styles.dateText}>{Moment(jobs.offers[item[0]].postDate).fromNow()}</Text>
+                                        <Text
+                                            style={styles.dateText}>{Moment(jobs.offers[item[0]].postDate).fromNow()}</Text>
                                     </View>
                                 </View>
                             </View>
                             <View style={styles.descriptionContainer}>
                                 <View style={{flexDirection: 'row'}}>
-                                    <Text style={styles.subtitle}>Type: </Text><Text style={styles.descriptionText}>{jobs.offers[item[0]].type}</Text>
+                                    <Text style={styles.subtitle}>Type: </Text><Text
+                                    style={styles.descriptionText}>{jobs.offers[item[0]].type}</Text>
                                 </View>
                                 <View style={{flexDirection: 'row'}}>
-                                    <Text style={styles.subtitle}>Salary: </Text><Text style={styles.descriptionText}>{jobs.offers[item[0]].salary}</Text>
+                                    <Text style={styles.subtitle}>Salary: </Text><Text
+                                    style={styles.descriptionText}>{jobs.offers[item[0]].salary}</Text>
                                 </View>
                                 <View style={{flexDirection: 'row'}}>
-                                    <Text style={styles.subtitle}>Term: </Text><Text style={styles.descriptionText}>{Moment(jobs.offers[item[0]].dueDate).format("MMMM Do YYYY")}</Text>
+                                    <Text style={styles.subtitle}>Term: </Text><Text
+                                    style={styles.descriptionText}>{Moment(jobs.offers[item[0]].dueDate).format("MMMM Do YYYY")}</Text>
                                 </View>
                                 <View>
                                     <Text style={styles.subtitle}>Benefits: </Text>
@@ -106,8 +111,8 @@ class StatusComponent extends Component {
                                     <Text ellipsizeMode={'tail'}
                                           numberOfLines={3}
                                           style={styles.descriptionText}>
-                                    {jobs.offers[item[0]].description}
-                                </Text>
+                                        {jobs.offers[item[0]].description}
+                                    </Text>
                                 </View>
 
                             </View>
@@ -122,7 +127,7 @@ class StatusComponent extends Component {
         const {User, Jobs} = this.props;
         return (
             <ScrollView style={{backgroundColor: "#f0f0f0", paddingTop: 10,}}>
-                { this.renderFavoriteJobs(User, Jobs) }
+                {this.renderFavoriteJobs(User, Jobs)}
                 <View style={{marginBottom: 10}}/>
             </ScrollView>
         );
@@ -131,72 +136,72 @@ class StatusComponent extends Component {
 
 const styles = StyleSheet.create({
     cardContainer: {
-        backgroundColor:'#fff',
-        marginBottom:10,
+        backgroundColor: '#fff',
+        marginBottom: 10,
         marginLeft: 10,
         marginRight: 10,
         shadowColor: '#dddddd',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.8,
         shadowRadius: 20,
         elevation: 1,
         borderRadius: 20,
     },
-    cardTop:{
+    cardTop: {
         padding: 10,
-        flex:1,
-        flexDirection:'row',
+        flex: 1,
+        flexDirection: 'row',
     },
-    cardTopRight:{
-        paddingLeft:8,
+    cardTopRight: {
+        paddingLeft: 8,
         paddingRight: 8,
         flex: 1
     },
-    positionText:{
-        color:'#0C3C35',
-        fontSize:16,
-        fontFamily:'Roboto-Bold',
-    },
-    locationText:{
+    positionText: {
         color: '#0C3C35',
-        fontSize:12,
-        flex: 1,
-        fontFamily:'Roboto-Regular',
+        fontSize: 16,
+        fontFamily: 'Roboto-Bold',
     },
-    dateText:{
+    locationText: {
+        color: '#0C3C35',
+        fontSize: 12,
+        flex: 1,
+        fontFamily: 'Roboto-Regular',
+    },
+    dateText: {
         color: '#746D6D',
-        fontSize:12,
-        fontFamily:'Roboto-LightItalic'
+        fontSize: 12,
+        fontFamily: 'Roboto-LightItalic'
     },
     descriptionContainer: {
 
         paddingTop: 10,
-        paddingLeft:10,
+        paddingLeft: 10,
         paddingRight: 10,
         paddingBottom: 20,
         flex: 1,
         flexWrap: 'wrap'
     },
-    descriptionText:{
+    descriptionText: {
         color: "#000",
         fontSize: 14,
-        fontFamily:'Roboto-Regular',
+        fontFamily: 'Roboto-Regular',
     },
-    subtitle:{
-        fontFamily:'Roboto-Bold',
-        color:'#000',
+    subtitle: {
+        fontFamily: 'Roboto-Bold',
+        color: '#000',
         fontSize: 14
     },
-    badge:{
+    badge: {
         borderRadius: 16,
         justifyContent: 'center',
         height: 24,
         paddingLeft: 8,
         paddingRight: 8,
     },
-    badgeText:{
-        fontFamily:'Roboto-Bold',
-        color:'#fff',
+    badgeText: {
+        fontFamily: 'Roboto-Bold',
+        color: '#fff',
         fontSize: 12,
     }
 });

@@ -1,13 +1,12 @@
 import {SIGN_UP, SIGN_IN, AUTO_SIGN_IN, GET_USER_INFO, APPLY_TO_JOB, UPDATE_FAVORITES} from '../types';
 
 
-
-export default function (state={}, action) {
+export default function (state = {}, action) {
     switch (action.type) {
         case SIGN_IN:
             return {
                 ...state,
-                auth:{
+                auth: {
                     uid: action.payload.localId || false,
                     token: action.payload.idToken || false,
                     refreshToken: action.payload.refreshToken || false,
@@ -17,7 +16,7 @@ export default function (state={}, action) {
         case SIGN_UP:
             return {
                 ...state,
-                auth:{
+                auth: {
                     uid: action.payload.localId || false,
                     token: action.payload.idToken || false,
                     refreshToken: action.payload.refreshToken || false,
@@ -27,7 +26,7 @@ export default function (state={}, action) {
         case AUTO_SIGN_IN:
             return {
                 ...state,
-                auth:{
+                auth: {
                     uid: action.payload.user_id || false,
                     token: action.payload.id_token || false,
                     refreshToken: action.payload.refresh_token || false,

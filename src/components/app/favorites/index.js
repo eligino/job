@@ -7,7 +7,7 @@ import Logo from "../../../utils/misc/logo";
 import {getJobs} from "../../../store/actions/jobsActionCreators";
 import {updateFavorites} from "../../../store/actions/userActionCreators";
 import {connect} from "react-redux";
-import { bindActionCreators } from "redux";
+import {bindActionCreators} from "redux";
 
 class FavoritesComponent extends Component {
 
@@ -35,20 +35,22 @@ class FavoritesComponent extends Component {
         return (
             user.info ?
                 user.info.favorites.map((jobId, id) => (
-                    <TouchableOpacity key={id} onPress={()=> this.props.navigation.navigate('FavoriteDetails', {jobId: jobId})}>
+                    <TouchableOpacity key={id}
+                                      onPress={() => this.props.navigation.navigate('FavoriteDetails', {jobId: jobId})}>
                         <View style={styles.cardContainer}>
                             <View style={styles.cardTop}>
 
                                 <View>
-                                    <SvgUri source={{uri: jobs.offers[jobId].enterpriseData.logo }} width="50" height="50"/>
+                                    <SvgUri source={{uri: jobs.offers[jobId].enterpriseData.logo}} width="50"
+                                            height="50"/>
                                 </View>
 
                                 <View style={styles.cardTopRight}>
 
-                                    <View style={{flexDirection:'row'}}>
+                                    <View style={{flexDirection: 'row'}}>
                                         <View style={{flex: 1}}>
                                             <Text style={styles.positionText}>{jobs.offers[jobId].position}</Text>
-                                            <Text>{ jobs.offers[jobId].enterpriseData.name }</Text>
+                                            <Text>{jobs.offers[jobId].enterpriseData.name}</Text>
                                         </View>
 
                                         <TouchableOpacity onPress={() => this.props.updateFavorites(user, jobId)}>
@@ -57,10 +59,10 @@ class FavoritesComponent extends Component {
                                     </View>
 
 
-
-                                    <View style={{flexDirection:'row'}}>
+                                    <View style={{flexDirection: 'row'}}>
                                         <Text style={styles.locationText}>{jobs.offers[jobId].location}</Text>
-                                        <Text style={styles.dateText}>{Moment(jobs.offers[jobId].postDate).fromNow()}</Text>
+                                        <Text
+                                            style={styles.dateText}>{Moment(jobs.offers[jobId].postDate).fromNow()}</Text>
                                     </View>
                                 </View>
                             </View>
@@ -82,7 +84,7 @@ class FavoritesComponent extends Component {
         const {User, Jobs} = this.props;
         return (
             <ScrollView style={{backgroundColor: "#f0f0f0", paddingTop: 10,}}>
-                { this.renderFavoriteJobs(User, Jobs) }
+                {this.renderFavoriteJobs(User, Jobs)}
                 <View style={{marginBottom: 10}}/>
             </ScrollView>
         );
@@ -91,51 +93,51 @@ class FavoritesComponent extends Component {
 
 const styles = StyleSheet.create({
     cardContainer: {
-        backgroundColor:'#fff',
+        backgroundColor: '#fff',
 
-        marginBottom:10,
+        marginBottom: 10,
         marginLeft: 10,
         marginRight: 10,
         shadowColor: '#dddddd',
-        shadowOffset: { width: 0, height: 2 },
+        shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.8,
         shadowRadius: 20,
         elevation: 1,
         borderRadius: 20,
     },
-    cardTop:{
+    cardTop: {
         padding: 10,
-        flex:1,
-        flexDirection:'row',
+        flex: 1,
+        flexDirection: 'row',
     },
-    cardTopRight:{
-        paddingLeft:8,
+    cardTopRight: {
+        paddingLeft: 8,
         paddingRight: 8,
         flex: 1
     },
-    positionText:{
-        color:'#0C3C35',
-        fontSize:16,
-        fontFamily:'Roboto-Bold',
-    },
-    locationText:{
+    positionText: {
         color: '#0C3C35',
-        fontSize:12,
-        flex: 1,
-        fontFamily:'Roboto-Regular',
+        fontSize: 16,
+        fontFamily: 'Roboto-Bold',
     },
-    dateText:{
+    locationText: {
+        color: '#0C3C35',
+        fontSize: 12,
+        flex: 1,
+        fontFamily: 'Roboto-Regular',
+    },
+    dateText: {
         color: '#746D6D',
-        fontSize:12,
-        fontFamily:'Roboto-LightItalic'
+        fontSize: 12,
+        fontFamily: 'Roboto-LightItalic'
     },
 
-    descriptionText:{
+    descriptionText: {
         color: "#000",
         fontSize: 14,
-        fontFamily:'Roboto-Regular',
+        fontFamily: 'Roboto-Regular',
         paddingTop: 10,
-        paddingLeft:10,
+        paddingLeft: 10,
         paddingRight: 10,
         paddingBottom: 20
     },

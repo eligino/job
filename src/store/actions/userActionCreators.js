@@ -1,44 +1,43 @@
-import {SIGN_UP, SIGN_IN, AUTO_SIGN_IN, GET_USER_INFO, UPDATE_FAVORITES, APPLY_TO_JOB, GET_JOBS} from '../types';
+import {SIGN_UP, SIGN_IN, AUTO_SIGN_IN, GET_USER_INFO, UPDATE_FAVORITES, APPLY_TO_JOB} from '../types';
 import {SIGN_IN_URL, SIGN_UP_URL, REFRESH_URL, FIREBASE_URL} from '../../utils/misc/misc';
 
 import axios from 'axios';
 
 
-
 export const signUp = (data) => {
 
-    const promise = new Promise((resolve,reject)=>{
+    const promise = new Promise((resolve, reject) => {
 
         axios({
-            method:'POST',
-            url:SIGN_UP_URL,
-            data:{
+            method: 'POST',
+            url: SIGN_UP_URL,
+            data: {
                 email: data.email,
                 password: data.password,
                 returnSecureToken: true
             },
-            header:{
+            header: {
                 "Content-Type": "application/json"
             }
-        }).then( response =>{
+        }).then(response => {
             const user = response.data;
 
             axios({
-                method:'PATCH',
-                url:`${FIREBASE_URL}/users.json`,
-                data:{
+                method: 'PATCH',
+                url: `${FIREBASE_URL}/users.json`,
+                data: {
                     [user.localId]: {
-                        firstName : "",
-                        lastName : "",
-                        photo : "",
+                        firstName: "",
+                        lastName: "",
+                        photo: "",
                         sent: [],
                         favorites: []
                     }
                 },
-            }).then( response => {
+            }).then(() => {
                 resolve(user)
             })
-        }).catch(e=>{
+        }).catch(e => {
             console.log(e);
             reject(false)
         })
@@ -46,7 +45,7 @@ export const signUp = (data) => {
 
     return {
         type: SIGN_UP,
-        payload:promise
+        payload: promise
     };
 
     //
@@ -75,22 +74,21 @@ export const signUp = (data) => {
 };
 
 
-
 export const signIn = (data) => {
     const request = axios({
-        method:'POST',
-        url:SIGN_IN_URL,
-        data:{
+        method: 'POST',
+        url: SIGN_IN_URL,
+        data: {
             email: data.email,
             password: data.password,
             returnSecureToken: true
         },
-        header:{
+        header: {
             "Content-Type": "application/json"
         }
-    }).then(response=>{
+    }).then(response => {
         return response.data;
-    }).catch( e => {
+    }).catch(() => {
         return false;
     });
 
@@ -107,9 +105,9 @@ export const autoSignIn = (refreshToken) => {
         url: REFRESH_URL,
         data: "grant_type=refresh_token&refresh_token=" + refreshToken,
         header: 'Content-Type: application/x-www-form-urlencoded'
-    }).then(response=>{
+    }).then(response => {
         return response.data;
-    }).catch( e => {
+    }).catch(() => {
         return false;
     });
 
@@ -120,14 +118,13 @@ export const autoSignIn = (refreshToken) => {
 };
 
 
-
 export const getUserInfo = (uid) => {
     const request = axios({
-        method:'GET',
-        url:`${FIREBASE_URL}/users/${uid}.json`
-    }).then(response=>{
+        method: 'GET',
+        url: `${FIREBASE_URL}/users/${uid}.json`
+    }).then(response => {
         return response.data;
-    }).catch( e => {
+    }).catch(() => {
         return false;
     });
 
@@ -143,12 +140,12 @@ export const updateFavorites = (user, id) => {
     user.info.favorites.includes(id) ? user.info.favorites.splice(user.info.favorites.indexOf(id), 1) : user.info.favorites.push(id);
 
     const request = axios({
-        method:'PUT',
-        url:`${FIREBASE_URL}/users/${user.auth.uid}/favorites.json`,
+        method: 'PUT',
+        url: `${FIREBASE_URL}/users/${user.auth.uid}/favorites.json`,
         data: user.info.favorites
-    }).then(response=>{
+    }).then(response => {
         return response.data;
-    }).catch( e => {
+    }).catch(() => {
         return false;
     });
 
@@ -163,12 +160,12 @@ export const applyToJob = (user, id) => {
     user.info.sent.push([id, 'in review']);
 
     const request = axios({
-        method:'PUT',
-        url:`${FIREBASE_URL}/users/${user.auth.uid}/sent.json`,
+        method: 'PUT',
+        url: `${FIREBASE_URL}/users/${user.auth.uid}/sent.json`,
         data: user.info.sent
-    }).then(response=>{
+    }).then(response => {
         return response.data;
-    }).catch( e => {
+    }).catch(() => {
         return false;
     });
 

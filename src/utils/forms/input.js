@@ -5,15 +5,13 @@ import {StyleSheet, TextInput} from 'react-native';
 const input = (props) => {
     let template = null;
 
-    switch (props.type) {
-        case 'textInput':
-            template = <TextInput {...props}
-                                  style={styles.input}
-                                  placeholderTextColor={'#CECECE'}
-                                  autoCapitalize={'none'}/>
-            break;
-        default:
-            return template;
+    if (props.type === 'textInput') {
+        template = <TextInput {...props}
+                              style={styles.input}
+                              placeholderTextColor={'#CECECE'}
+                              autoCapitalize={'none'}/>;
+    } else {
+        return template;
     }
 
 

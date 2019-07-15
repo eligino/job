@@ -1,0 +1,355 @@
+{
+  "enterprises" : {
+    "5d124ada3dd48a47e7d6da7a" : {
+      "logo" : "https://image.flaticon.com/icons/svg/124/124010.svg",
+      "name" : "Facebook"
+    },
+    "5d124d7f3dd48a47e7d6da7d" : {
+      "logo" : "https://image.flaticon.com/icons/svg/124/124011.svg",
+      "name" : "LinkedIn"
+    },
+    "5d124e023dd48a47e7d6da7e" : {
+      "logo" : "https://image.flaticon.com/icons/svg/124/124015.svg",
+      "name" : "YouTube"
+    },
+    "5d124e5f3dd48a47e7d6da7f" : {
+      "logo" : "https://image.flaticon.com/icons/svg/732/732229.svg",
+      "name" : "Nike"
+    },
+    "5d124fc23dd48a47e7d6da80" : {
+      "logo" : "https://image.flaticon.com/icons/svg/888/888871.svg",
+      "name" : "PayPal"
+    },
+    "5d124ffc3dd48a47e7d6da81" : {
+      "logo" : "https://image.flaticon.com/icons/svg/888/888835.svg",
+      "name" : "Adobe"
+    },
+    "5d1250b93dd48a47e7d6da82" : {
+      "logo" : "https://image.flaticon.com/icons/svg/871/871394.svg",
+      "name" : "Ubisoft"
+    },
+    "5d1251053dd48a47e7d6da83" : {
+      "logo" : "https://image.flaticon.com/icons/svg/806/806029.svg",
+      "name" : "Volkswagen"
+    },
+    "5d12513f3dd48a47e7d6da84" : {
+      "logo" : "https://image.flaticon.com/icons/svg/806/806086.svg",
+      "name" : "Tesla"
+    },
+    "5d12518d3dd48a47e7d6da85" : {
+      "logo" : "https://image.flaticon.com/icons/svg/882/882701.svg",
+      "name" : "SAP"
+    },
+    "5d1251d73dd48a47e7d6da86" : {
+      "logo" : "https://image.flaticon.com/icons/svg/882/882720.svg",
+      "name" : "xiaomi"
+    },
+    "5d1252233dd48a47e7d6da87" : {
+      "logo" : "https://image.flaticon.com/icons/svg/882/882704.svg",
+      "name" : "Apple"
+    }
+  },
+  "offers" : {
+    "5d1252da3dd48a47e7d6da88" : {
+      "benefits" : "Competitive salary and compensation package  \nHealth Benefits, Dental, Eye Care  \n401K  \nProfessional and fun work environment, part of a great team",
+      "description" : "Job Summary  \nFacebook is seeking a talented Full Stack Developer to join our Marketing & Web team. This Full Stack Developer provides expertise across multiple segments of digital marketing aligned to the overall success of the company.  We’ve been delivering cutting-edge performance products, services, and customer experiences since 2001. We are looking to expand our existing marketing efforts through the use of technology, and this is a position to grow within the company.  \nResponsibilities and Duties  \nIdentifying potential for increasing sales on our ecommerce website, and building solutions to do so  \nDeveloping integrations with third party systems (using APIs, Web Services, etc)  \nDesign new pages and maintain existing sections of our website  Working with the Marketing & Web team to increase brand awareness and customer engagement through website, social media, videos, etc  \nTaking part in video shoots (in studio, at events and on track)  \nAnalyzing and optimizing existing SEM strategies  \nCreate and execute new digital marketing strategies  \nImplementing features and functionality in the form of tools to streamline operations",
+      "dueDate" : "2019-07-31T00:00:00.000+0000",
+      "enterprise" : "5d124ada3dd48a47e7d6da7a",
+      "experiences" : "Digital Marketing: 2 years (Required)  \nSearch Engine Optimization: 2 years (Required)",
+      "location" : "Pompano Beach, South Florida",
+      "other" : "Track experiences & thrills Salary is based on experience. We are looking to fill this full-time position immediately with a “gearhead” who is passionate about automotive performance and lifestyle. Only applicants local in South Florida should apply (this position is in Pompano Beach).Please submit resume, cover letter and salary requirements. Must pass drug test.",
+      "position" : "Full stack web developer",
+      "postDate" : "2019-06-26T18:30:00.000+0000",
+      "requirements" : "Must Haves: \nStrong knowledge of Automobiles  \nStrong knowledge of PHP (minimum 3 years experience)  \nKnowledge of LAMP stacks, \nexperience maintaining Linux servers  \nExperience with Laravel or other OOP frameworks  \nAdwords, \nAnalytics, \nsolid understanding of SEM & SEO and tools/strategies (minimum 2 years experience)  \nQuick learner and self-motivated  \nHighly valued: \nA passion for automotive performance, a true gearhead  \nStrong sense of design (Graphic Design experience)  \nStrong JS experience, including Node.js",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1333a87b52534a151fce07" : {
+      "benefits" : "",
+      "description" : "The Security Investigator will inform and protect the Internet Truckstop (ITS) family of companies and customers from security threats to the transportation industry.\n\n Essential Job Functions:\nReview all new broker, carrier, dispatcher, shipper, freight-forwarder and manufacturer applications sent to Security.\nReview: accounts given by other departments, complaints given by Assurance Services, identity theft cases. IP checks and reviews to validate authorized usage of the services Truckstop.com provides.\nMaintain the Security email and Salesforce case queue by reviewing emails and cases received and assigning to Security team members as necessary.\nBlock access/MC’s and DOT numbers for companies that have been banned or that require full security reviews.\nMaintain accurate and detailed security records. Perform data entry into security system.\nProtect the Truckstop.com’s family of companies and customers from security breaches, hackers, frauds and scams, and other related criminal activities in the transportation industry.\nConduct research as needed on competing companies (Pirate Files).\nProduce Agent History Reports for Enterprise accounts who request them.\nReview and put up Industry Alerts, Missing /Stolen Alerts and Law Enforcement Alerts.\nWork on DOMO to identify possible abuse on our website\nWork with Tech department and management on hacking issues.\nWork with law enforcement on criminal activities; compile and send reports to them.\nWork on special security projects for director, and as requested by company owner.\nMaintain performance standards set by Director of Assurance\nMaintain the department standard quality assurance rate established by Director of Assurance\nAssist with phone back-up for other departments when necessary.",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d1252233dd48a47e7d6da87",
+      "experiences" : "",
+      "location" : "New Plymouth, USA",
+      "other" : "",
+      "position" : "Security Investigator",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "High school diploma or equivalent\nMust have good investigative skills; able to research with limited information; able to “see beyond the surface of an issue”\nWorking knowledge of the transportation industry\nMust be able to type 40 wpm with high degree of accuracy\nAbility to perform data entry efficiently and accurately with close attention to detail\nAbility to communicate effectively verbally and in writing\nAbility to problem solve using department procedures and manage own time to meet department goals and deadlines\nAbility to communicate effectively verbally and in writing, including working with upset customers\nAbility to work independently and as part of a team\nAbility to analyze situations and make a good judgment calls based on department policies\nAbility to handle multiple tasks at once\n\n\nMust be familiar with company products and navigate the company’s programs and systems in a reasonable amount of time. Be proficient in Microsoft Office (Outlook, Excel, and Word), Internet, and use of office equipment. Maintain cooperative effective working relationships within the company and support a team environment. Manage own time to meet department goals and deadlines.",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1337897b52534a151fce08" : {
+      "benefits" : "",
+      "description" : "Job Description:\nAre you a resourceful, motivated, self-starting and passionate NodeJS leader ? If so, we’d like to talk to you about joining our team.\nPayPal’s Web Engineering Team supports all NodeJS development at PayPal;\n    B uilding/documenting/supporting secure, performant NodeJS frameworks and components\n    Applying proven development principles ( MVC , Unix , KISS , DRY , YAGNI and Twelve Factor )\n    Working closely with PayPal’s large NodeJS developer community\n    Evangelizing and presenting internally and at outside industry events like SeleniumConf , DockerCon , NodeDay , NodeSummit , JSConf and more \nJoin us at PayPal in our mission to evolve:\n    O ur NodeJS framework offerings based on evolving NodeJS features and customer demand\n    O ur NodeJS developer experience across our entire software development lifecycle (develop, test, build, deploy, monitor)\n    Our documentation, training and outreach (both within PayPal and beyond) \nResponsibilities:\n    C hampioning positive engineering change \n    Mentoring fellow engineers\n    Owning PayPa l’s NodeJS platform architecture\n    Building proofs-of-concept (POC) with fellow engineers and stakeholders\n    Transforming successful POCs into well-executed team initiatives\n    Delivering scalable solutions that improve core performance and developer experience",
+      "dueDate" : "2019-08-30T00:00:00.000+0000",
+      "enterprise" : "5d124fc23dd48a47e7d6da80",
+      "experiences" : "",
+      "location" : "San Jose, California, United States of America",
+      "other" : "",
+      "position" : "PayPal Web Engineering Lead specializing in NodeJS ",
+      "postDate" : "2019-06-26T18:30:00.000+0000",
+      "requirements" : "You :\n    \n    Have a high personal bar for software excellence\n    Have production experience with NodeJS at scale\n    Use open-source methodologies and tools \n    Have a strong desire to learn, push the envelope, and share knowledge with others\n    Have e xperience with test automation: TDD, unit/integration/functional testing\n    Will collaborate across functional areas\n    Will base technical decisions on facts, data, and existing context \nNice to have:\n    B achelor’s degree in CS or applicable code academy degree\n    O pen source footprint, with your own module or as a contributor to other modules ",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13378d7b52534a151fce09" : {
+      "benefits" : "Medical, Dental, Vision, Aflac, 401K, Life Insurance, paid sick days, vacation, holidays, and personal days",
+      "description" : "Job Purpose:\nThis position will assist the Tesla Documentation Supervisor in coordinating the day to day operations of the department needs. The candidate will be knowledgeable of department goals, procedures, and policies. Deals with Tesla logistics team, CFR Rinkens Fremont team, vessel carriers, container truckers, warehouses, and interacts with all levels of the organization. Ability to prioritize and organize all the workload; ability to create documents/ AES filling/ prealerts with no errors and to easily spot mistakes.\nDuties and Responsibilities:\n    Responsible for making bookings with the carriers, accurately entering the data in LS and sending the new bookings to CFR Fremont and Tesla logistics teams;\n    In charge of submitting accurate and timely documentation to carriers: preliminary IMOs (where applicable), Bill of Lading instructions, Bill of Lading proofreading and request any needed BL revisions; obtaining carrier telex releases.\n    In charge of confirming with carriers the sailing of containers and updating Logisuite with any changes in sailing\n    Responsible for accurate data input for documentation (HBL & MBL) and accordingly revise the documents if any changes in shipping occur.\n    Correct AES filing with US Customs in accordance with US Customs regulation; accordingly revise the AES records if any changes in shipping occur.\n    Proof carrier BLs/ invoices for any rate errors in accordance with the SOP provided, approve carrier invoices, enter the costs in LS and email the rated BLs/ invoices to accounting for payment.\n    Responsible for gathering and emailing prealert documents for the sailed containers within 2-3 days from sailing; double-check shipment documents and prealert information in order to ensure no prealert errors.\n    In charge of closing the files on a monthly basis by the 7th business day of the following month according to the SOP provided.\n    Responsible for gathering and providing Tesla the ocean carrier BLs requested\n    Aggregate monthly all Tesla AES ITN numbers and report them to Tesla.\n    Assist CFR Fremont team in addressing operational issues with the carriers (increasing or decreasing bookings, solving issues with ingating containers at the terminal, issues with hazmat approval)\n    Assist in answering emails from carriers in regards to Tesla bookings\n    Daily KPI reporting\n    Maintain Google Spreadsheet daily\n    Thoroughly follow up by email or by phone with carriers on getting issues resolved, follow up on paperwork or corrections\nOther Duties\nPlease note this job description is not designed to cover or contain a comprehensive listing of activities, duties, or responsibilities that are required of the employee for this job. Duties, responsibilities and activities may change at any time with or without notice.",
+      "dueDate" : "2019-08-15T00:00:00.000+0000",
+      "enterprise" : "5d12513f3dd48a47e7d6da84",
+      "experiences" : "",
+      "location" : "Long Beach, CA",
+      "other" : "",
+      "position" : "OEM Documentation Specialist",
+      "postDate" : "2019-05-25T08:00:00.000+0000",
+      "requirements" : "Knowledge, Skills, and Education\n    \n    Minimum of high school diploma\n    Working knowledge with Microsoft Office Suite, excellent grammar\n    Effective oral and written communication skills with excellent interpersonal skills\n    Excellent research and follow-up skills\n    Managing processes, analyzing info, and problem solving skills\n    Professionalism and organization\n    Positive attitude\n    45+WPM typing speed\nSupervisory Responsibility\n    This position does not have supervisory responsibilities\nPhysical Demands\n    The physical demands described here are representative of those that must be met by an employee to successfully perform the essential functions of this job. While performing the duties of this job, the employee is regularly required to talk, hear, see, type and move around the facilities. Employee must be able lift, carry, push, pull, grasp, hold, twisting, turning, sit, stand, and bend. This job would require the ability to lift files/boxes, and open filing cabinets. Must be able to lift 20 pounds.",
+      "salary" : "$14 - $17 per hour depending on experience",
+      "type" : "Full-Time"
+    },
+    "5d1337907b52534a151fce0a" : {
+      "benefits" : "",
+      "description" : "Work Hard. Play Hard.\nYou're a natural leader, motivator and always up for a challenge. Nike is looking for the nextPart-Time Athleteto join our team.\nAre you ready?\nAs a Nike Direct Athlete, you provide world-class service to the consumer using the four service principles:\nKNOW: Build an authentic connection with consumers by getting to know them to guide their journey.\nEQUIP: Credible Athletes equip consumers through product and service knowledge and expertise.\nENGAGE: Connect with consumers by inviting them to engage with Nike.\nINSPIRE: Inspire by creating an emotional connection to the brand between the consumer and Nike.\nResponsibilities\n    Be passionate about Nike products and services.\n    Demonstrate enthusiasm and eagerness to learn the fundamentals of all store Athlete roles, including but not limited to Service, Visual Presentation, and Stockroom.\n    Deliver the best possible service an attention to all consumers.\n    Assist the team in executing all daily retail operations to ensure premium service and smooth store functioning.\n    Develop positive relationships with consumers and teammates.\n    Be an active member of the store community by attending and supporting store events.\n    Model reliability and flexibility by being able to work varied hours and days to meet the needs of the business.\n    Maintain knowledge of various store departments and be available to operate cash register for regular transactions, perform shipping and receiving duties, stock the floor, perform cleaning duties, and build visual displays when necessary.",
+      "dueDate" : "2019-07-30T00:00:00.000+0000",
+      "enterprise" : "5d124e5f3dd48a47e7d6da7f",
+      "experiences" : "",
+      "location" : "California",
+      "other" : "",
+      "position" : "Nike Tejon Ranch Part-Time Athlete",
+      "postDate" : "2019-06-27T11:00:00.000+0000",
+      "requirements" : "Qualifications\n    Must have or be pursuing a High School diploma or GED\n    Able to perform basic math functions, including addition, subtraction, multiplication and division\n    Able to effectively communicate in verbal and written English\n    Physical requirements include the ability to twist, bend, squat, reach, climb a ladder and stand for extended periods of time\n    Able to accomplish multiple tasks in a fast-paced environment\n    Able to work effectively with others in a team-oriented environment and provide excellent customer service\n    One or more years of customer service and/or retail experience preferred\nTo ensure that we continue to hire competent, ethical and trustworthy individuals, all candidates must successfully complete a thorough background investigation prior to employment.",
+      "salary" : "",
+      "type" : "Part-time"
+    },
+    "5d1337947b52534a151fce0b" : {
+      "benefits" : "",
+      "description" : "The Graphics Designer will:\nCommunicate the Flexera brand to internal and external audiences by concepting and designing sales support materials, ads, white papers, articles, presentations, videos and other work as\nneeded\nWork closely with the writers on the marketing team to develop impactful brand-consistent messaging\nServe as a creative resource for all internal Flexera departments and teams\nUnderstand the Flexera brand and serve as its steward for all internal and external communications\nReport to the Senior Director of Content and continually develop skills and expand talents\nResearch and create impactful and brand-consistent materials for a wide range of internal clients and external prospect/customer audiences\nCompletely understand our target personas and how they relate to the business outcomes delivered by our product portfolio\nWork with the senior director of content to develop new ways to bring the Flexera brand to customers and prospects",
+      "dueDate" : "2019-08-27T00:00:00.000+0000",
+      "enterprise" : "5d1250b93dd48a47e7d6da82",
+      "experiences" : "",
+      "location" : "New york, USA",
+      "other" : "",
+      "position" : "Graphics Designer",
+      "postDate" : "2019-06-27T10:45:00.000+0000",
+      "requirements" : "",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1382057b52534a151fce0c" : {
+      "benefits" : "",
+      "description" : "Adobe is seeking a Perl Developer with Python skills, for a contract position with its direct financial services client, in Montreal, QC.\nThe successful candidate will be challenged to innovate and embrace change. Using Agile methodologies, the candidate will get involved in all aspects of the SDLC including design and architecture. The candidate will have the opportunity to work with relational databases, messaging/transport services, caching technologies and test frameworks.\nThe ideal candidate is quick thinking, comfortable working across multiple technologies and can take ownership of critical problems throughout the full project life-cycle. The candidate will work in a collaborative and results-oriented environment where effectiveness matters more than hours in the office or years past experience.\nResponsibilities:\nApplication development on robust, large-scale real-time systems using Java and either Perl or Python\nProvisioning of APIs or services for use by our internal technical platform\nImplementation of appropriate caching and messaging technologies",
+      "dueDate" : "2019-07-28T00:00:00.000+0000",
+      "enterprise" : "5d124ffc3dd48a47e7d6da81",
+      "experiences" : "",
+      "location" : "Montreal, QC",
+      "other" : "",
+      "position" : "Perl Developer (Python / Java)",
+      "postDate" : "2019-06-28T19:26:00.000+0000",
+      "requirements" : "Required Skills:\nStrong development experience with Perl\nSome Python experience is required\nJava development experience would be ideal\nExperience working with relational databases (e.g., Sybase or DB2) to develop schema, stored procedures or native SQL\nMessaging experience, for example MQ, Kafka, JSON\nStrong experience with unit testing\nUnix/Linux experience\nStrong communication skills.",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13820a7b52534a151fce0d" : {
+      "benefits" : "",
+      "description" : "Description:\nThe client is looking for a consultant with experience in Machine Learning, Deep Learning and Natural Language Processing (NLP) to join information management team and help build and deploy machine-learning models and systems to support the effective management of information across the firm.\nThe consultant will have the opportunity to analyze large sets of structured and unstructured data to build NLP/ML/MR solutions.\n",
+      "dueDate" : "2019-07-30T00:00:00.000+0000",
+      "enterprise" : "5d1251d73dd48a47e7d6da86",
+      "experiences" : "",
+      "location" : "Montreal, QC",
+      "other" : "",
+      "position" : "Data Scientist (Machine Learning)",
+      "postDate" : "2019-06-28T19:20:00.000+0000",
+      "requirements" : "Skills Required:\n• Degree in Computer Science, Mathematics, Statistics, Physics or another quantitative field\n• 2 + years of experience with design and implementation of machine learning, deep learning, knowledge bases, recommendation systems, information retrieval, natural language understanding.\n• 2+ years of experience in R or Python\n• Experience with Semantic Web Standards (RDF, RDFS, OWL, SPARQL)\n• Excellent verbal, written, and interpersonal communication skills\nSkills Desired:\n• Experience with embeddings, clustering, recommendation systems and predictive modeling\n• Experience with algorithm development\n• Experience with H2O, MXNet, Keras or TensorFlow\n• Experience with Java\n• Experience with some of the following: Marklogic, Stardog, Virtuoso, AllegroGraph, Neptune, CosmosDB, Neo4j, Stanford CoreNLP, GATE NLP, Word2Vec, Protégé, Smartlogic, Dataiku or Data. World, Web Services, XML, REST, SOAP, JSON\n• Experience working with new technology while working closely with software developers\nEducation Level: Bachelor's Degree.\n",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13820c7b52534a151fce0e" : {
+      "benefits" : "",
+      "description" : "The consultant will join one of the Tax squads; Scrum and Kanban are the methodologies used for product development.",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124fc23dd48a47e7d6da80",
+      "experiences" : "",
+      "location" : "Paris, France",
+      "other" : "",
+      "position" : "Java / J2EE Developer (Financial/Tax domain)",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "Skills required:\n• Versatilist (t-shaped)\n• Strong interest in the financial/tax domain\n• Communication\n• Collaboration and teamwork/teambuilding\n• Value oriented\n• Dealing with change/flexibility\n• Problem solving/analytical skills\n• Technical skills as an asset: Java/J2EE/SQL technologies\nSkills desired:\n• Financial background\n• XP practices such as pair programming, DDD, TDD/BDD, continuous integration or feature toggles\n• Devops tooling (Liquibase, TeamCity, Git, Zookeeper)\n• Other technologies such as Angular js\n• Education Level: Master's Degree",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13820f7b52534a151fce0f" : {
+      "benefits" : "",
+      "description" : "The Application Delivery Network Engineering position is part of the Innovation Team within Core Fabric Engineering. The Network Innovation team is responsible for the Development of Technology, Capability and Product Roadmaps, New Product & Service Certifications, Industry intelligence and Cross-Platform IT Initiatives. This role will lead the architecture, engineering and design of solutions of the core Application Delivery Networking components of the firm; leverages core networking technologies as F5, Akamai, Routing & Switching, QoS in conjunction with Web Application Fluency at layers 4 -7 to optimize the performance of existing and new applications; acts as a trusted advisor to the application development teams to ensure performance and resiliency requirements are optimized.\nThis role will be responsible for solutions in the following areas:\n \nApplication Delivery & Load Balancing:\nF5 Technologies (LTM/GTM, iRules, WAM/AAM)\nNetwork Application Protocols (TCP/IP, DNS, HTTP/S, BGP)\nCloud based Web Acceleration Technologies & CDN (Akamai)\n \nThe successful candidate must have demonstrated ability to architect, engineer, design and document solutions in these areas of Application Delivery working closely with the Application Development, Core Network & Security Engineering teams to ensure proposed solutions incorporate best practices for Web traffic optimization.",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d1251053dd48a47e7d6da83",
+      "experiences" : "",
+      "location" : "Toronto, ON",
+      "other" : "The Company is an equal opportunity employer and makes employment decisions on the basis of merit and business needs.  The Company will consider all qualified applicants for employment without regard to race, color, religious creed, citizenship, national origin, ancestry, age, sex, sexual orientation, genetic information, physical or mental disability, veteran or marital status, or any other class protected by law.  To comply with applicable laws ensuring equal employment opportunities to qualified individuals with a disability, the Company will make reasonable accommodations for the known physical or mental limitations of an otherwise qualified individual with a disability who is an applicant or an employee unless undue hardship to the Company would result.",
+      "position" : "Infrastructure Architect",
+      "postDate" : "2019-06-30T17:30:00.000+0000",
+      "requirements" : "*Job Requirements\nOn a day-day basis the Application Delivery Engineer is responsible for:\nLeveraging F5 technologies to architect solutions for traffic balancing within WEB application platforms\nPartner with the Application Development groups to understand new requirements or major initiatives in customer facing Web applications and offer ways to optimize flows\nLeverage iRules and design solutions for improving the taxonomy of application specific rules with maximum efficiency and minimal complexity\nAnalyze existing application flows with a deep understanding of all protocol layers and proactively promote technology ideas that can add value, reduce costs or optimize performance & customer experience to each of bank's core businesses\n \nThis role is a critical entry point to the Network Engineering Organization interacting with multiple lines of Business, peer Infrastructure teams, Application Development, Vendors and Service Providers – Job Requirements include:\nExperience in Complex WEB Application Architectures\nExperience with AND solutions in Highly Virtualized Environments\nExperience in providing guidance and technical solutions from existing product & design catalogue or gather requirements to drive new solutions\nExperience in creating high level and technical presentations and communication skills to explain the approach to a varying audience\nProven ability to work in a fast paced environment and manage multiple deadlines and priorities\nProven ability to collaborate across a large organization to effectively realize outcomes\nExperience with regulatory / compliance requirements\nHistory of making an impact, developing and executing on strategies and delivering superior results in both the short and long term\nProven ability to leverage deep subject matter expertise to develop and deploy a vision and help align others to that vision.\nListening and engaging others to provide input in the shaping of that vision\nAdapts to new different or changing requirements, quickly grasps new concepts adapts and reflects on lessons learned – comfortable with ambiguity, analyzes and evaluates, defines problem/challenge, identifies alternatives and makes timely decisions\nWork closely & collaboratively with Internal Engineering, Application Development, Deployment & Operations teams to drive design adoption across IT\nExperience with Vendor Management and coordination concepts from multiple facets of the industry\nProvide support to internal customers through innovative solutions creating sustainable and maintainable environments.\nAbility to make engineering design decisions, solves technical problems, and makes improvements to our systems. Bachelor's degree in computer science, engineering, or equivalent work experience",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1382127b52534a151fce10" : {
+      "benefits" : "",
+      "description" : "Possibility of Extension/Conversion: The extension will depend on the workload and conversion to full time will depend upon the candidate's performance.\nGroup Information: The team consists of 15 full time employees and 2 contractors. The team is responsible for network security and connectivity to cloud\nWhat Project Will The Contractor Be Working On: The contractor will be working on various ongoing projects\nWho Will The Contractor Be Working With on a Daily Basis: The contractor will be interacting with various teams in the bank\nDaily Job Duties Include:\n• Communicating with engineers from different line of business to endure to network standards\n• Gather requirements from various lines of business to implement solutions\n• Adjust network sizes to meet volume or capacity demands\n• Communicate with customers, sales staff, or marketing staff to determine customer needs\n• Coordinate network operations, maintenance, repairs or upgrades",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d12518d3dd48a47e7d6da85",
+      "experiences" : "",
+      "location" : "Paris, France",
+      "other" : "",
+      "position" : "Network Engineer",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "Must-Have Skills/Experience:\n• 10+ years of similar experience\n• Cisco certification (minimum CCNP, ideally CCIE)\n• Experience with F5 (vendor)\n• Scripting knowledge of Ansible and Python\n",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1382157b52534a151fce11" : {
+      "benefits" : "",
+      "description" : "Ubisoft requires the position of a Computer Operator within our Infrastructure & Operations department. Under the direction of the Team Manager, the Computer Operator operates & monitors various computer systems and associated peripheral equipment. The successful candidate will collaborate with staff from many areas of the company and interact with external customers as needed.\nDUTIES AND RESPONSIBILITIES:\n    Performs batch schedule, backup and computer systems monitoring services.\n    Monitors the health of real time systems and ensures the applications are available on time and are performing properly.\n    Monitors backups of the businesss services within different environments.\n    Assists in the analysis of problems relating to the processing of production runs and contacts system support personnel as required to resolve issues.\n    Investigates and communicates discrepancies to the Operations Analyst area.\n    Performs customer print related services on our high-speed printers and ensures that all print outs are of high quality and accuracy.\n    Monitors paper inventory and stock shortages.\n    Maintains accurate logs of all computer operations activities and computer system problems.\n    Maintains the computer area and equipment in a clean and functional manner.\n    Assists in the training and mentoring of new Computer Operations staff.\n    Performs special assignments and related duties as required.",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d1250b93dd48a47e7d6da82",
+      "experiences" : "",
+      "location" : "Edmonton, AB",
+      "other" : "",
+      "position" : "Computer Operator - Computer Operations",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "SKILLS AND KNOWLEDGE:\nWillingness to work shiftwork as assigned (7 days a week, 24 hours a day) on a rotating schedule, which involves day, evening, night and weekend shifts is required.\nAttention to detail, ensuring end products are of high quality and accuracy.\nDemonstrated ability and willingness to work with minimal supervision\nSelf-motivation is critical to successful performance in this role.\nDemonstrated success in working in a team environment.\nPreference will be given to candidates having prior experience with Broadcom Dollar Universe, EMC Networker application, and Xerox high-speed print.\nPrevious experience in computer operations would be an asset.",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1382177b52534a151fce12" : {
+      "benefits" : "",
+      "description" : "OUR IDEAL CANDIDATE\nWe are looking for a freelance developer (contract 6 months+) who writes code that they are proud of and can hit the ground running. You will be working in a full stack environment on a variety of projects ranging from day-to-day code maintenance and bug fixes to new code development.The position collaborates with a team of web developers, digital strategists, digital recruitment, and branding experts to help clients create and promote their employer brand and become employers of choice for job seekers.\n \nRESPONSIBILITIES\n    Maintain existing or create new client websites and internal solutions; troubleshoot bug fixes in PHP and JavaScript.\n    Develop clean, maintainable code\n    Work with designers and front end developers to ensure technical feasibility of UX / UI\n    Assist with estimation of tasks to facilitate planning.\n    Document code development and revisions\n    Ensure all code is valid and conform to the W3C standards",
+      "dueDate" : "2019-08-01T00:00:00.000+0000",
+      "enterprise" : "5d1252233dd48a47e7d6da87",
+      "experiences" : "EXPERIENCE\n5+ years of experience writing real world web applications in PHP\n3+ years of experience with an MVC framework.",
+      "location" : "San francisco, USA",
+      "other" : "",
+      "position" : "Back end Web Developer (PHP)",
+      "postDate" : "2019-07-01T11:00:00.000+0000",
+      "requirements" : "PERSONAL SKILLS\n    Commitment to high-quality code and structure\n    Outstanding analysis, problem-solving, communication, time management, and teamwork skills\n    A desire to own a project from beginning to end, with a strong sense of pride in a job exceptionally done\nSKILLS\n    Great understanding of Object Oriented Programming and SOLID principles\n    Excellent knowledge of web technologies in PHP\n    Experience with relational (SQL) databases\n    Knowledge of Redis or other caching methods\n    Proficient understanding of web markup, including HTML5, CSS3\n    Good understanding of client-side scripting and JavaScript frameworks\n    Excellent knowledge of Git\n    Ability to analyze web pages for the purpose of optimizing load time\n    Knowledge of Linux servers is a plus (LAMP)\n    Excellent English communication skills, both verbal and written\n \nEPIC, BUT UNNECESSARY\n    Bilingual (English and French)\n    Experience working in or with creative agencies\n    Experience managing servers and domains",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13821a7b52534a151fce13" : {
+      "benefits" : "",
+      "description" : "Our client, a leader in their field, currently seeks a decisive and solution-focused leader with 8+ years’ experience in project management, overseeing and delivering complex products, preferably on the digital or mobile side of retail, in an Agile environment.  If you are a Senior Project Manager who has strengths in building relationships with project partners, removing roadblocks and driving the work of an innovative team, we want to hear from you.\nResponsibilities:\n    Plan and execute projects under EPMO guidelines, while overseeing the day-to-day operations through the application of best practices in project management principles and methodologies, while contributing to strategic direction.\n    Own and be responsible for the end-to-end process including detailed planning, budgeting, reporting, implementation, change management and training.\n    Successfully deliver complex cross-functional projects on time, on budget and with high client satisfaction\n    Expedite issues resolution, negotiating and influencing people at all levels to ensure project goals are met, while being accountable for ensuring deliverables are achieved and for maintaining a high quality of the products built.\n    Provide administrative oversight of the resources throughout the life cycle of the project.",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d1251053dd48a47e7d6da83",
+      "experiences" : "",
+      "location" : "Boston, USA",
+      "other" : "",
+      "position" : "Senior Project Manager",
+      "postDate" : "2019-07-01T19:00:00.000+0000",
+      "requirements" : "Qualifications:\nMinimum of 8 years solid PM experience showing progression up to the senior level\nPMP Qualification a must\nCertified Scrum Master is bonus\nHighly detail oriented with the desire to go deep into the projects subject matter while maintaining an understanding of the big picture\nTeam player – must be able to work at the delivery team level to identify delivery path forward\nMust be able to own the delivery, be the voice of the project and be the CEO for delivery\n    Use the tools of the EPMO to bring attention to the issues of a project and bring appropriate attention to the plan\nProven track record in running large project streams with a mix of operations, technical development, and business streams – we deliver products to market, not just a technical release into other programs\nExperience in financial sector running delivery projects\nExperience running business streams as part of the delivery stream\nIT Focused – comfortable running complex projects with a technical release component\nDemonstrable track record in mentoring junior and intermediate PMs\nProduct development experience bringing a project from initial scoping through to launch\nMust show experience running steering committee and program level governance\nReporting to middle management and C-level execs\nShow that you have followed and contributed to PMO/EPMO delivery process\nContinually building trust and relationships within the delivery teams and the business stakeholders",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13821c7b52534a151fce14" : {
+      "benefits" : "",
+      "description" : "We are seeking an SAP MDG/MDM Data/Business Analyst consultant for our Calgary, AB based client\n**ONLY LOCAL CANDIDATES CURRENTLY RESIDING IN CALGARY WILL BE CONSIDERED\nTERM: 6 months, with a high likelihood of extension\nSTART: ASAP\nRole Description:\nIndividual who is passionate about data act as a data evangelist ( Prefer – someone worked in data space before ) who can speak to data owners/ stewards.\nThe individual should have technical skills to perform basic data analysis, basic testing as it relates to data and process, act as a change agent, able to facilities workshops to understand existing business process or suggest new business process to make master data work effectively.\nUnderstanding of SAP landscape is critical for this role as well.\nAdditional Assets: SAP MDG, SAP BRF+ knowledge",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124ada3dd48a47e7d6da7a",
+      "experiences" : "",
+      "location" : "Calgary, AB",
+      "other" : "",
+      "position" : "",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d13821f7b52534a151fce15" : {
+      "benefits" : "",
+      "description" : "We are looking to engage a BI Specialist for a 6-month contract in Calgary (Full Time hours Onsite).",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124ada3dd48a47e7d6da7a",
+      "experiences" : "",
+      "location" : "Bruxel, Belgium",
+      "other" : "",
+      "position" : "BI Specialist",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "Primary Requirement:\nThis Resource will NEED to have completed a migration of PowerBI to QuickSight (AWS) - this is a MANDATORY.\nSecondary Requirements are:\n    Specialty in POWERBI and QUICKSIGHT\n    Deep knowledge in AWS - especially on data modeling, snowflake, Aurora and quicksight. ",
+      "salary" : "$70.00 - $100.00 /hour",
+      "type" : "Full-Time"
+    },
+    "5d1382227b52534a151fce16" : {
+      "benefits" : "",
+      "description" : "Responsibilities\nCreate test cases and test scripts for each scenario and link them to requirements\nUpload of testing information to HP ALM plus other HP Admin duties when requested\nExecute test cases and update test cases with actual results and evidence of execution/results",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124e5f3dd48a47e7d6da7f",
+      "experiences" : "",
+      "location" : "Dakar, SN",
+      "other" : "",
+      "position" : "QA",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "Must have:\n    5 + years of QA experience in Canadian Organizations\n    Experience with testing an enterprise service bus, preferably the IBM Integration Bus (IIB)\n    Strong experience with Database SQL queries\n    Advanced user skills with HPQC and/or HP ALM. (Requirements, Testing and Defects modules)\n    General knowledge of RDBMS (Relational Database Management System) hands on experience with at least 2 flavours of SQL (DB2, Oracle)\nNice to have:\n    Retail and Order Management Systems experience",
+      "salary" : "$519.00 - $520.00 /year",
+      "type" : "Full-Time"
+    },
+    "5d1382247b52534a151fce17" : {
+      "benefits" : "",
+      "description" : "We are looking to engage a Server Administrator to design, implement and administer on premise server infrastructure and Microsoft Cloud services utilizing industry and security best practices.\nThe resource MUST have a minimum 7 years of recent and practical server administration experience, including several years in a senior server administrator role that incorporates Microsoft Cloud services. Typical activities in this role include:\nLeading with the design, implementation, documentation, and troubleshooting of the enterprise server environment.\nHelps prepare plans for development and installation of server and storage according to present and future requirements\nProvides expert technical support, administration, and engineering on Microsoft and VMware vSphere environments\nLeads the monitoring, performance tunes, troubleshooting and resolution of system problems to ensure system availability\nProvides expert technical support with the VMware environment including but not limited to VMware vSphere and VMware Horizon\nManage and maintain server disaster recovery including planning, implementation, maintenance and testing\nLeads and manages the configuration, administration, upgrade, and maintenance of corporate and DR servers and related infrastructure as well as the Storage Environment\nInteracts with our user base (corporate and field employees) on an as needed basis regarding technology issues and escalations\nProvides infrastructure architecture recommendations\nWorks with server patch management processes and procedures to facilitate deployment\nMaintains systems integrity through change control and problem management procedures and communication with internal customers\nAccomplishes department objectives by leading staff; organizing and monitoring work process\nFollows Standard Operating Procedures when carrying out position responsibilities\nAttends and participates in team meetings\nWorks with the Enterprise and Solution Architecture team and other business leads to establish scalable server and storage solutions.\nAct as a representative of Information Systems",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124fc23dd48a47e7d6da80",
+      "experiences" : "",
+      "location" : "Regina, SK",
+      "other" : "",
+      "position" : "Server Admin",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "Requirements:\nProven proficiency in Microsoft on premise server architecture, design, and implementation\nProven proficiency in Microsoft Cloud (0365, Azure) architecture, design and services.\nProven proficiency in VMware vSphere architecture, design, and implementation\nProven proficiency with server and storage security best practices\nExperience in influencing and establishing collaboration direction within an organization\nUnderstanding of enterprise level on-premise server and cloud architecture\nUnderstanding of integrations of an on-premise environment and the cloud.\nNorth American job experience",
+      "salary" : "$90.00 - $120.00 /hour",
+      "type" : "Full-Time"
+    },
+    "5d1382277b52534a151fce18" : {
+      "benefits" : "",
+      "description" : "Attention Software Test Script Writers! Are you looking for your next exciting opportunity where you can use your great Visual Basic Scripting Skills on Hardware and Software Products? Our client in North York is looking to add on two new contract resources!\nWhat will you be doing?\n- Understands the customer’s needs and through life cycle concerns whatever the used means (e.g. advanced studies, simulations, mock-ups, models, prototypes, etc.).\n- Contributes to the formalization of mission/function description, architectural & algorithms design and the refinement of functional and non-functional requirements.\n- Designs, codes, debugs, write test procedures and tests software code, chairs design reviews.\n- Reviews code, test procedures, and test results\n- Analyses and implements correction for defect reports",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124fc23dd48a47e7d6da80",
+      "experiences" : "",
+      "location" : "Toronto, ON",
+      "other" : "",
+      "position" : "Software Test Script Writers x 2 (VB script)",
+      "postDate" : "2019-07-05T18:30:00.000+0000",
+      "requirements" : "What do you need to bring to the table?\nMust understand Networking principles and Protocols (TCP, UDP)\nMust be able to use VB Scripting to support the development of test automation scripts\nComfortable working in the Lab environment for prolonged periods of time\nExperience troubleshooting and debugging HW and SW products\nGood command of the English language\nMinimum 3 years of relevant working experience\nVisual Basics is a must ",
+      "salary" : "",
+      "type" : "Full-Time"
+    },
+    "5d1382297b52534a151fce19" : {
+      "benefits" : "",
+      "description" : "\nAttention Embedded Software Developers! Are you looking for your next exciting opportunity where you can use your great C++/C Coding skills on real-time systems and embedded software? Our client in North York is looking to add on two new contract resources!\nWhat will you be doing?\n- Understands & follows the company’s processes & procedures for developing mission-critical software\n- Develops real-time systems written in C\n- Writes requirements, designs, codes, debugs, writes test procedures & tests software code\n- Reviews requirements, design documents, code, test procedures & test results\n- Analyses & implements correction for defect reports",
+      "dueDate" : "2019-08-05T00:00:00.000+0000",
+      "enterprise" : "5d124e023dd48a47e7d6da7e",
+      "experiences" : "",
+      "location" : "Toronto, ON",
+      "other" : "",
+      "position" : "Embedded Software Developers x 2",
+      "postDate" : "2019-06-25T18:30:00.000+0000",
+      "requirements" : "What do you need to bring to the table?\n- 5+ years of working experience in software development in C++\n- Command of scripting languages, preferably Python\n- Experience with black box and white box testing and continuous integration frameworks\n- Familiar with source control tools (git, ClearCase, etc.), static analysis (PC-lint, Coverity, etc.), build system automation\n- Excellent analytical skills, able to diagnose issues based on field logs & correlate events to failures",
+      "salary" : "",
+      "type" : "Full-Time"
+    }
+  },
+  "users" : {
+    "RHeJLRMtqrT40wETmFkoXtrkbut1" : {
+      "firstName" : "",
+      "lastName" : "",
+      "photo" : ""
+    },
+    "pQJYBy1EtxTxap7Nd8ahAvYWmAr1" : {
+      "favorites" : [ "5d13820f7b52534a151fce0f", "5d1333a87b52534a151fce07", "5d1337897b52534a151fce08", "5d13820a7b52534a151fce0d", "5d1337907b52534a151fce0a", "5d13821f7b52534a151fce15", "5d1337947b52534a151fce0b" ],
+      "firstName" : "Elisee Othniel",
+      "lastName" : "AMEGASSI",
+      "photo" : "https://images.pexels.com/photos/1484792/pexels-photo-1484792.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "sent" : [ [ "5d1337907b52534a151fce0a", "in review" ], [ "5d13821f7b52534a151fce15", "not accepted" ], [ "5d1337897b52534a151fce08", "accepted" ], [ "5d13820a7b52534a151fce0d", "in review" ], [ "5d1333a87b52534a151fce07", "in review" ] ]
+    },
+    "yUqktSfb1DgbNd1DLfOoHxI9i1n1" : {
+      "favorites" : [ "5d1337897b52534a151fce08", "5d1333a87b52534a151fce07" ],
+      "firstName" : "",
+      "lastName" : "",
+      "photo" : "",
+      "sent" : [ [ "5d1252da3dd48a47e7d6da88", "in review" ], [ "5d1333a87b52534a151fce07", "in review" ] ]
+    }
+  }
+}

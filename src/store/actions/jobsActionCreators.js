@@ -5,22 +5,22 @@ import {FIREBASE_URL} from "../../utils/misc/misc";
 
 export function getJobs() {
 
-    const promise = new Promise((resolve,reject)=>{
+    const promise = new Promise((resolve, reject) => {
 
         axios({
-            method:'GET',
-            url:`${FIREBASE_URL}/enterprises.json`
-        }).then( response =>{
+            method: 'GET',
+            url: `${FIREBASE_URL}/enterprises.json`
+        }).then(response => {
             const enterprises = response.data;
 
             axios({
-                method:'GET',
-                url:`${FIREBASE_URL}/offers.json`
-            }).then( response => {
+                method: 'GET',
+                url: `${FIREBASE_URL}/offers.json`
+            }).then(response => {
                 const jobs = response.data;
                 const responseData = {};
 
-                for(let id in jobs){
+                for (let id in jobs) {
                     responseData[id] = {
                         ...jobs[id],
                         enterpriseData: enterprises[jobs[id].enterprise]
@@ -29,7 +29,7 @@ export function getJobs() {
 
                 resolve(responseData)
             })
-        }).catch(e=>{
+        }).catch(e => {
             console.log(e);
             reject(false)
         })
@@ -37,7 +37,7 @@ export function getJobs() {
 
     return {
         type: GET_JOBS,
-        payload:promise
+        payload: promise
     };
 }
 

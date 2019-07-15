@@ -9,9 +9,7 @@ import LinearGradient from "react-native-linear-gradient";
 import Logo from "../../utils/misc/logo";
 
 
-
 import {setTokens} from "../../utils/misc/misc";
-
 
 
 class Register extends Component {
@@ -61,10 +59,8 @@ class Register extends Component {
 
         // rules
         let rules = formCopy[name].rules;
-        let valid = ValidationRules(value, rules, formCopy);
 
-
-        formCopy[name].valid = valid;
+        formCopy[name].valid = ValidationRules(value, rules, formCopy);
 
         this.setState({
             form: formCopy
@@ -102,14 +98,11 @@ class Register extends Component {
                 const user = this.props.screenProps.user;
                 this.props.screenProps.getUserInfo(user.auth.uid).then(() => {
                     const userWithInfo = this.props.screenProps.user;
-                    this.props.navigation.navigate('App',{user: userWithInfo});
+                    this.props.navigation.navigate('App', {user: userWithInfo});
                 })
             })
         }
     };
-
-
-
 
 
     render() {
@@ -165,7 +158,6 @@ class Register extends Component {
         )
     }
 }
-
 
 
 export default Register;
