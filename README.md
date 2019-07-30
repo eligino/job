@@ -51,17 +51,6 @@ Hooray! 🎉🎉
   <table>
     <tr>
         <td>
-            <img src="" alt="" width="250" />
-        </td>
-        <td>
-            <img src="" alt="" width="250" />
-        </td>
-        <td>
-            <img src="" alt="" width="250" />
-        </td>
-    </tr>
-    <tr>
-        <td>
             <img src="./screenshots/android/Screenshot_1564411963.png" alt="Icon" width="250" />
         </td>
         <td>
